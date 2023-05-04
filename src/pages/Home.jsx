@@ -115,7 +115,7 @@ const Home = () => {
                 <Box display="flex" justifyContent="center" gap="12px" color="#2FD0DA" textAlign="start">
                     <Box width="22%" >
                         <Image borderRadius="15px" height="250px" width="100%" src='https://static.insydo.com/wp-content/uploads/2017/07/aqua-biking-1280x854.jpg'></Image>
-                        <Text>GROUP TRAINING HALL</Text>
+                        <Text>AQUA SPINNING</Text>
                             <hr style={{
                                 marginTop: "0px",
                                 border: "0",
@@ -125,7 +125,7 @@ const Home = () => {
                     </Box>
                     <Box width="22%" >
                         <Image borderRadius="15px" height="250px" width="100%" src='https://media.gq-magazine.co.uk/photos/5d1390f3f81f9c550a603bbc/16:9/pass/Pilates_GQ_30Mar11.jpg'></Image>
-                        <Text>GROUP TRAINING HALL</Text>
+                        <Text>PILATES</Text>
                             <hr style={{
                                 marginTop: "0px",
                                 border: "0",
@@ -135,7 +135,7 @@ const Home = () => {
                     </Box>
                     <Box width="22%" >
                         <Image borderRadius="15px" height="250px" width="100%" src='https://www.fitnessfirst.com.sg/-/media/project/evolution-wellness/fitness-first/south-east-asia/singapore/classes/hatha-yoga/hatha-yoga-fb.jpg'></Image>
-                        <Text>GROUP TRAINING HALL</Text>
+                        <Text>HATHA YOGA</Text>
                             <hr style={{
                                 marginTop: "0px",
                                 border: "0",
@@ -145,7 +145,7 @@ const Home = () => {
                     </Box>
                     <Box width="22%" >
                         <Image borderRadius="15px" height="250px" width="100%" src='https://t4.ftcdn.net/jpg/01/49/42/27/360_F_149422723_Ie6ik2McMFZ344Gy7yCyZ9Il4n19J44R.jpg'></Image>
-                        <Text>GROUP TRAINING HALL</Text>
+                        <Text>SKY JUMPING</Text>
                             <hr style={{
                                 marginTop: "0px",
                                 border: "0",
