@@ -11,7 +11,7 @@ const Navbar = () => {
       <div style={{width:"40%",justifyContent:"space-around",display:"flex",color:"#F1F4FC"}}>
         <Link to="/classes">CLASSES</Link>
         <Link to="/coaches">COACHES</Link>
-        <Link to="/blog">BLOG</Link>
+        {/* <Link to="/blog">BLOG</Link> */}
         <Link to="/about-us">ABOUT US</Link>
       </div>
       <Box style={{width:"15%",justifyContent:"space-between",display:"flex"}}>
