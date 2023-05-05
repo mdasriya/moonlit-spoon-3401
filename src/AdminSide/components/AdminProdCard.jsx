@@ -1,19 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { handleDelete, handleEdit } from '../Redux-Admin/action'
 
 const AdminProdCard = ({...item}) => {
    
     const {id,image,name,price,offer, price_cut}  = item 
   
   
-    const handleEdit=()=>{
-        console.log("edit");
-    }
-
-    const handleDelete=()=>{
-        console.log("delete");
-    }
+    
 
 
     return (
@@ -23,8 +17,8 @@ const AdminProdCard = ({...item}) => {
         <h4>Price : ₹{price}/-</h4>
         <h4>Price Cut :  ₹{price_cut}/-</h4>
         <h4>Offer : {offer}</h4>
-        <button onClick={handleEdit} className='crud-e'>Edit</button>
-        <button onClick={handleDelete} className='crud-d'>Delete</button>
+        <button onClick={()=>handleEdit(id)} className='crud-e'>Edit</button>
+        <button onClick={()=>handleDelete(id)} className='crud-d'>Delete</button>
     </DIV>
   )
 }

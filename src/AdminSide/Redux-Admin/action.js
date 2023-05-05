@@ -53,3 +53,16 @@ export const addProductFromAdmin =(payload)=>async(dispatch)=>{
     }
 }
 
+//edit products 
+
+export const handleEdit = ()=>{
+    return 1 
+}
+
+
+
+//handle delete 
+
+export const handleDelete =()=>{
+    return 2 
+}
