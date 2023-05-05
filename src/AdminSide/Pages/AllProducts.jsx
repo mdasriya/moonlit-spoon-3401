@@ -5,7 +5,7 @@ import {getAllProductsAdminSide} from "../Redux-Admin/action";
 import NavAdmin from '../components/NavAdmin';
 import AdminProdCard from '../components/AdminProdCard';
 import styled from 'styled-components';
-
+import EditProd from '../components/EditProd';
 
 
 const AllProducts = () => {
@@ -28,7 +28,12 @@ const AllProducts = () => {
 
         <DIV>
         {products.length >0 && products.map((item)=>{
-        return <AdminProdCard key={item.id} {...item}/>
+        return ( <div>
+             <AdminProdCard key={item.id} {...item}/>
+                  <EditProd item={item}/>
+                  <button>Delete</button>
+        </div>
+        )
         })}
         </DIV>
    
