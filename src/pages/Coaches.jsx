@@ -4,7 +4,7 @@ import { Box, Heading, Image, Text } from '@chakra-ui/react'
 
 const Coaches = () => {
     return (
-        <div>
+        <div id='coaches'>
             <Box>
                 <Box fontSize="18px" paddingLeft="5%" color="#E1F4F6" textAlign="start" marginRight="10%">
                     <Heading>COACHES</Heading>

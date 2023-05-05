@@ -3,7 +3,7 @@ import React from 'react'
 
 const AboutUs = () => {
     return (
-        <Box paddingLeft="5%" width="100%" backgroundImage="https://hips.hearstapps.com/hmg-prod/images/athlete-in-a-gym-royalty-free-image-1651055064.jpg">
+        <Box paddingLeft="5%" width="100%" backgroundImage="https://hips.hearstapps.com/hmg-prod/images/athlete-in-a-gym-royalty-free-image-1651055064.jpg" id='about-us'>
             <Box height="600px" display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center">
                 <Box textAlign="start" color="white" width="40%" bgPosition="center" fontSize="18px">
                     <Heading>ABOUT US</Heading>
