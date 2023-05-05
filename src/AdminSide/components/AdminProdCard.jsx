@@ -18,7 +18,7 @@ const AdminProdCard = ({...item}) => {
 
     return (
     <DIV>
-        <img src={image} alt='image_prod'/>
+        <img id='imgg' src={image} alt='image_prod'/>
         <h4>{name}</h4>
         <h4>Price : ₹{price}/-</h4>
         <h4>Price Cut :  ₹{price_cut}/-</h4>
@@ -33,17 +33,25 @@ export default AdminProdCard
 
 
 const DIV = styled.div`
-    border:1px solid grey;
-    background-color: #f1f1ee;
+    /* border:1px solid grey; */
+    /* background-color: #f1f1ee; */
     width: 350px;
-    height: 500px;
+    height: 420px;
     margin: auto;
-    
-    
+    gap: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    :hover{
+        border: 1px solid black;
+        background-color: floralwhite;
+    }
+    #imgg{
+          margin: auto;
+    }
 
     .crud-e{
         border: 1px solid black;
-        background-color: yellow;
+        background-color: #587ae0;
+        color:white;
         width: 30%;
         height: 6%;
         margin-right: 10px;
@@ -51,7 +59,8 @@ const DIV = styled.div`
 
     .crud-d{
         border: 1px solid black;
-        background-color: red;
+        background-color: #f03d3d;
+        color:white;
         width: 30%;
         height: 6%;
     }
