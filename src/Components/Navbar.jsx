@@ -10,10 +10,12 @@ const Navbar = () => {
         </Image>
       </Box>
       <div style={{width:"40%",justifyContent:"space-around",display:"flex",color:"#F1F4FC"}}>
+
         <Link to="/#classes" smooth>CLASSES</Link>
         <Link to="/#coaches" smooth>COACHES</Link>
         {/* <Link to="/blog">BLOG</Link> */}
         <Link to="/#about-us" smooth>ABOUT US</Link>
+
       </div>
       <Box style={{width:"15%",justifyContent:"space-between",display:"flex"}}>
         <Link>
