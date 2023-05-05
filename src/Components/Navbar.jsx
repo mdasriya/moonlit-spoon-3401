@@ -1,6 +1,6 @@
 import { Box,Image,Button } from '@chakra-ui/react'
 import React from 'react'
-// import { Link } from 'react-scroll';
+
 import { HashLink as Link } from 'react-router-hash-link'
 const Navbar = () => {
   return (
@@ -12,7 +12,7 @@ const Navbar = () => {
       <div style={{width:"40%",justifyContent:"space-around",display:"flex",color:"#F1F4FC"}}>
         <Link to="/#classes" smooth>CLASSES</Link>
         <Link to="/#coaches" smooth>COACHES</Link>
-        {/* <Link to="/blog">BLOG</Link> */}
+        {/* <Link to="/#blog" smooth>BLOG</Link> */}
         <Link to="/#about-us" smooth>ABOUT US</Link>
       </div>
       <Box style={{width:"15%",justifyContent:"space-between",display:"flex"}}>
