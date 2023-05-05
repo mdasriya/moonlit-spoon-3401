@@ -28,7 +28,7 @@ export const getAllAdminProdErr =()=>{
 // Function to get All Products in admin dashboard 
 
 export const getAllProductsAdminSide = ()=>async(dispatch)=>{
-            dispatch(getAllAdminProdReq())
+    dispatch(getAllAdminProdReq())
     try {
         let res= await axios.get(url);
         let data = res.data 
@@ -39,3 +39,17 @@ export const getAllProductsAdminSide = ()=>async(dispatch)=>{
         dispatch(getAllAdminProdErr());
     }
 }
+
+
+//function to add products to database 
+
+export const addProductFromAdmin =(payload)=>async(dispatch)=>{
+    try {
+        let res= await axios.post(url,payload)
+        let data= res.data 
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+

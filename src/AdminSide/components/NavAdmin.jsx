@@ -8,19 +8,21 @@ const NavAdmin = () => {
     <DIV>
 
         <Link to={"/dashboard"}>
-        <h4>Reports</h4>
+        <h4 className="names">Reports</h4>
         </Link>
         
         
         <Link to={"/allproducts"}>
-        <h4>All Products</h4>
+        <h4 className="names">All Products</h4>
         </Link>
         
         
+        <Link to={"/addProducts"}>
+        <h4 className="names">Add Products</h4>
+        </Link>
         
-        <h4>Add Products</h4>
-        <h4>Memberships</h4>
-        <h4>Users</h4>
+        <h4 className="names">Memberships</h4>
+        <h4 className="names">Users</h4>
     </DIV>
   )
 }
@@ -34,5 +36,14 @@ const DIV = styled.div`
     justify-content: space-around;
     align-items: center;
     height: 60px ;
+    background-color: azure;
+    
+    .names {
+      :hover {
+        color : orange
+        }
+    }
+     
+    
     
 `

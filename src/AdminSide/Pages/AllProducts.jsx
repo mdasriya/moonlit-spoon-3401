@@ -46,7 +46,4 @@ const DIV = styled.div`
     justify-content: center;
     grid-template-columns: repeat(4,1fr);
     gap:20px;
-    
-    
-
 `
