@@ -68,7 +68,7 @@ const Home = () => {
                                 marginTop: "0px",
                                 border: "0",
                                 height: "2px",
-                                backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                                backgroundImage: "linear-gradient(to right,  #2FD0DA,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
                             }}></hr>
                         </Box>
                         <Box textAlign="start" width="30%" position="relative" top="20" bottom="30">
@@ -78,7 +78,7 @@ const Home = () => {
                                 marginTop: "0px",
                                 border: "0",
                                 height: "2px",
-                                backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                                backgroundImage: "linear-gradient(to right,  #2FD0DA,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
                             }}></hr>
                         </Box>
                         <Box textAlign="start" width="30%" position="relative" top="40" bottom="50">
@@ -88,7 +88,7 @@ const Home = () => {
                                 marginTop: "0px",
                                 border: "0",
                                 height: "2px",
-                                backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                                backgroundImage: "linear-gradient(to right,  #2FD0DA,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
                             }}></hr>
                         </Box>
 
@@ -127,7 +127,7 @@ const Home = () => {
                             marginTop: "0px",
                             border: "0",
                             height: "2px",
-                            backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                            backgroundImage: "linear-gradient(to right,  #2FD0DA,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
                         }}></hr>
                     </Box>
                     <Box width="22%" >
@@ -137,7 +137,7 @@ const Home = () => {
                             marginTop: "0px",
                             border: "0",
                             height: "2px",
-                            backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                            backgroundImage: "linear-gradient(to right,  #2FD0DA,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
                         }}></hr>
                     </Box>
                     <Box width="22%" >
@@ -147,7 +147,7 @@ const Home = () => {
                             marginTop: "0px",
                             border: "0",
                             height: "2px",
-                            backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                            backgroundImage: "linear-gradient(to right,  #2FD0DA,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
                         }}></hr>
                     </Box>
                     <Box width="22%" >
@@ -157,7 +157,7 @@ const Home = () => {
                             marginTop: "0px",
                             border: "0",
                             height: "2px",
-                            backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                            backgroundImage: "linear-gradient(to right,  #2FD0DA,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
                         }}></hr>
                     </Box>
                 </Box>

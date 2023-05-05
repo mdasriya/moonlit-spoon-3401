@@ -23,7 +23,7 @@ const Contact = () => {
                         <div >
                             <div style={{ display: "flex", justifyContent: "flex-start" }}>
                                 <div style={{ marginRight: "10px", marginBottom: "20px" }}>
-                                    <label>Your Name</label>
+                                    <label>Your Name *</label>
                                     <br />
                                     <input
                                         required
@@ -42,7 +42,7 @@ const Contact = () => {
                                     ></input>
                                 </div>
                                 <div>
-                                    <label>Email Address</label>
+                                    <label>Email Address *</label>
                                     <br />
                                     <input
                                         required
@@ -63,7 +63,7 @@ const Contact = () => {
                             </div>
                             <div style={{ display: "flex", }}>
                                 <div style={{ marginRight: "10px", marginBottom: "20px" }}>
-                                    <label>Phone Number</label>
+                                    <label>Phone Number *</label>
                                     <br />
                                     <input
                                         required
@@ -82,7 +82,7 @@ const Contact = () => {
                                     ></input>
                                 </div>
                                 <div>
-                                    <label>Subject</label>
+                                    <label>Subject *</label>
                                     <br />
                                     <input
                                         required
