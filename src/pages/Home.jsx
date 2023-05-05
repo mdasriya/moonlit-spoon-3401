@@ -1,8 +1,10 @@
 import React from 'react'
 
-import { Box, Button, Heading, Image, Text } from '@chakra-ui/react'
+import { Box, Button,  Heading,  Image,  Text } from '@chakra-ui/react'
 import AboutUs from './AboutUs'
 import Coaches from './Coaches'
+
+import Contact from './Contact'
 const Home = () => {
     return (
         <><hr style={{
@@ -12,14 +14,14 @@ const Home = () => {
             backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
         }}></hr>
             <Box display="flex" justifyContent="space-around" alignItems="center" backgroundColor="black">
-                <Box width="50%">
+                <Box width="50%" display="flex" flexDirection="column" alignItems="start" marginLeft="5%">
                     <Heading color="white">
                         CREATE THE PATH TO YOURE EMPOWER
                     </Heading>
                     <Text color="white">
                         GET MORE WITH LOW-COST TRAINING PROGRAMS AND ADVACED FEATURES
                     </Text>
-                    <Button borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px">JOIN NOW</Button>
+                    <Button cursor="pointer" width="13%" borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px" color="#06181C" fontWeight="bold">JOIN NOW</Button>
                     <br />
                     <Image></Image>
                     <Image></Image>
@@ -28,13 +30,18 @@ const Home = () => {
                 <Image width="50%" src='https://cdn.shopify.com/s/files/1/0504/5357/7879/articles/cef7245a383825edafdd44c054496756.jpg?v=1667233332' ></Image>
 
             </Box>
+
             <hr style={{
                 marginTop: "0px",
                 border: "0",
                 height: "2px",
                 backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
             }}></hr>
+            <br />
+            <br />
             <AboutUs />
+            <br />
+            <br />
             <hr style={{
                 marginTop: "0px",
                 border: "0",
@@ -116,42 +123,42 @@ const Home = () => {
                     <Box width="22%" >
                         <Image borderRadius="15px" height="250px" width="100%" src='https://static.insydo.com/wp-content/uploads/2017/07/aqua-biking-1280x854.jpg'></Image>
                         <Text>AQUA SPINNING</Text>
-                            <hr style={{
-                                marginTop: "0px",
-                                border: "0",
-                                height: "2px",
-                                backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
-                            }}></hr>
+                        <hr style={{
+                            marginTop: "0px",
+                            border: "0",
+                            height: "2px",
+                            backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                        }}></hr>
                     </Box>
                     <Box width="22%" >
                         <Image borderRadius="15px" height="250px" width="100%" src='https://media.gq-magazine.co.uk/photos/5d1390f3f81f9c550a603bbc/16:9/pass/Pilates_GQ_30Mar11.jpg'></Image>
                         <Text>PILATES</Text>
-                            <hr style={{
-                                marginTop: "0px",
-                                border: "0",
-                                height: "2px",
-                                backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
-                            }}></hr>
+                        <hr style={{
+                            marginTop: "0px",
+                            border: "0",
+                            height: "2px",
+                            backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                        }}></hr>
                     </Box>
                     <Box width="22%" >
                         <Image borderRadius="15px" height="250px" width="100%" src='https://www.fitnessfirst.com.sg/-/media/project/evolution-wellness/fitness-first/south-east-asia/singapore/classes/hatha-yoga/hatha-yoga-fb.jpg'></Image>
                         <Text>HATHA YOGA</Text>
-                            <hr style={{
-                                marginTop: "0px",
-                                border: "0",
-                                height: "2px",
-                                backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
-                            }}></hr>
+                        <hr style={{
+                            marginTop: "0px",
+                            border: "0",
+                            height: "2px",
+                            backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                        }}></hr>
                     </Box>
                     <Box width="22%" >
                         <Image borderRadius="15px" height="250px" width="100%" src='https://t4.ftcdn.net/jpg/01/49/42/27/360_F_149422723_Ie6ik2McMFZ344Gy7yCyZ9Il4n19J44R.jpg'></Image>
                         <Text>SKY JUMPING</Text>
-                            <hr style={{
-                                marginTop: "0px",
-                                border: "0",
-                                height: "2px",
-                                backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
-                            }}></hr>
+                        <hr style={{
+                            marginTop: "0px",
+                            border: "0",
+                            height: "2px",
+                            backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+                        }}></hr>
                     </Box>
                 </Box>
             </Box>
@@ -167,10 +174,21 @@ const Home = () => {
                 height: "2px",
                 backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
             }}></hr>
+            
+            <Coaches />
             <br />
             <br />
             <br />
-            <Coaches/>
+            
+            <Contact/>
+            <br />
+            <br />
+            <hr style={{
+                marginTop: "0px",
+                border: "0",
+                height: "2px",
+                backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
+            }}></hr>
         </>
 
 
