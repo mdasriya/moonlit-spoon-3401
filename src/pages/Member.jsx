@@ -297,7 +297,7 @@ export default function Member() {
 
                                             <ModalBody paddingRight="50px">
 
-                                                <Text>Your Plan : </Text>
+                                                <Text fontSize="20px">Your Plan : </Text>
                                                 <Text >Plan Type : {planType}</Text>
 
                                                 <Text>Price : ${price}</Text>
