@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Flex, Heading, HStack, Text } from '@chakra-ui/react'
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons'
-const Contact = () => {
+export const Contact = () => {
     return (
         <Box display="flex" width="100%" id='contact-us'>
             <Flex width="45%" height="550px" backgroundSize="900px 660px" backgroundImage="https://image1.masterfile.com/getImage/NjMyLTA2MzE3OTk0ZW4uMDAwMDAwMDA=ADAWK4/632-06317994en_Masterfile.jpg" flexDirection="column" paddingLeft="5%" >
