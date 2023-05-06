@@ -15,8 +15,13 @@ import Product from './Product'
 
 import Member from './Member';
 import Contact from './Contact';
+
+import Login from './Login';
+import SignUp from './SignUp';
+
 import Memberships from '../AdminSide/Pages/Memberships';
 import Users from "../AdminSide/Pages/Users";
+
 
 
 
@@ -33,6 +38,8 @@ const MainRoutes = () => {
 
         <Route path='/classes' element={<Classes/>}></Route>
         <Route path='/coaches' element={<Coaches/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/signup' element={<SignUp/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/about-us' element={<AboutUs/>}></Route>
 
