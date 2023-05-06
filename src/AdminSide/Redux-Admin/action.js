@@ -92,3 +92,5 @@ export const getUsers=async()=>{
 }
 
 //this should be pushed 
+
+export const getadminSideInfo=()=>{}
