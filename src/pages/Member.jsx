@@ -13,7 +13,8 @@ import {
     Button,
     Input,
     FormControl,
-    FormLabel
+    FormLabel,
+    useToast
 
 } from '@chakra-ui/react';
 import { FaCheckCircle } from 'react-icons/fa';
@@ -49,7 +50,7 @@ function PriceWrapper({ children }) {
 
 export default function Member() {
     const { isOpen, onOpen, onClose } = useDisclosure();
-
+    const toast = useToast()
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
 
@@ -78,6 +79,7 @@ export default function Member() {
     }
 
     const addDetails = () => {
+        
         let flag = false;
         let data = {
             price,
@@ -90,7 +92,15 @@ export default function Member() {
 
             // }
             dispatch(postMembership(data));
-            window.alert("Plan added successfully")
+            // window.alert("Plan added successfully");
+            toast({
+                title: 'Plan Successfully Applied',
+                description: "Congratualation Now You Are a Member",
+                status: 'success',
+                duration: 4000,
+                isClosable: true,
+                position:"top"
+              })
             // console.log(Data)
         }
         else {
