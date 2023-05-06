@@ -41,8 +41,7 @@ export default function EditProd({ item }) {
     //   console.log(prodData)
     const { isOpen, onOpen, onClose } = useDisclosure();
   
-    // const [categoryState, setCategoryState]= useState(category);
-    // const [lamb, setLamb] = useState("");
+    
   
     const handleEdit = async (e) => {
       e.preventDefault();
@@ -54,10 +53,6 @@ export default function EditProd({ item }) {
         console.log(data);
         getAllAdminProdReq();
         
-        // console.log(url);
-        // reload();
-        // console.log(res.data);
-        // console.log(prodData);
       } catch (error) {
         console.log(error);
       }

@@ -55,14 +55,21 @@ export const addProductFromAdmin =(payload)=>async(dispatch)=>{
 
 //edit products 
 
-export const handleEdit = ()=>{
-    return 1 
-}
+// export const handleEdit = ()=>{
+//     return 1 
+// }
 
 
 
 //handle delete 
 
-export const handleDelete =()=>{
-    return 2 
+export const handleDelete =async(id)=>{
+    try {
+        let res= await axios.delete(`${url}/${id}`)
+        console.log(res.data);
+        
+    } catch (error) {
+        console.log(error);
+    }
+    window.location.reload();
 }

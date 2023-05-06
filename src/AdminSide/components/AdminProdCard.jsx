@@ -2,12 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import EditProd from '../components/EditProd';
 import { Button } from '@chakra-ui/react';
+import { handleDelete } from '../Redux-Admin/action';
 
 const AdminProdCard = ({...item}) => {
    
     const {id,image,name,price,offer, price_cut}  = item 
   
   
+    // handleDelete=(id)=>{
+    //         console.log(id);
+    // }
     
 
 
@@ -22,7 +26,7 @@ const AdminProdCard = ({...item}) => {
         {/* <button onClick={()=>handleDelete(id)} className='crud-d'>Delete</button> */}
         <div className='modalss'>
         <EditProd  item={item}/>
-        <Button className='crud-d'>Delete</Button>
+        <Button onClick={()=>handleDelete(item.id)} className='crud-d'>Delete</Button>
         </div>
         
     </DIV>
@@ -36,7 +40,7 @@ const DIV = styled.div`
     /* border:1px solid grey; */
     /* background-color: #f1f1ee; */
     width: 350px;
-    height: 420px;
+    height: 460px;
     margin: auto;
     gap: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
