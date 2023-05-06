@@ -13,7 +13,7 @@ const Home = () => {
             height: "2px",
             backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
         }}></hr>
-            <Box display="flex" justifyContent="space-around" alignItems="center" backgroundColor="black">
+            <Box marginTop="6.8%" display="flex" justifyContent="space-around" alignItems="center" backgroundColor="black">
                 <Box width="50%" display="flex" flexDirection="column" alignItems="start" marginLeft="5%">
                     <Heading color="white">
                         CREATE THE PATH TO YOURE EMPOWER
