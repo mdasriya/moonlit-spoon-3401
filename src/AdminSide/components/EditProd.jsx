@@ -15,10 +15,13 @@ import {
     Flex,
   } from "@chakra-ui/react";
   import axios from "axios";
-  
+  // import { handleDelete, handleEdit } from '../Redux-Admin/action'
   import { useState } from "react";
-  
-  export default function EditProd({ item }) {
+  import {getAllAdminProdReq} from "../Redux-Admin/action";
+
+ 
+
+export default function EditProd({ item }) {
     const [prodData, setProdData] = useState({
       name: item.name,
       price: item.price,
@@ -27,6 +30,7 @@ import {
       offer: item.offer  
     });
   
+    
     const {
      name,
      price,
@@ -40,7 +44,7 @@ import {
     // const [categoryState, setCategoryState]= useState(category);
     // const [lamb, setLamb] = useState("");
   
-    const handleAdd = async (e) => {
+    const handleEdit = async (e) => {
       e.preventDefault();
   
       try {
@@ -48,7 +52,8 @@ import {
         let res = await axios.patch(url, prodData);
         let data= res.data 
         console.log(data);
-
+        getAllAdminProdReq();
+        
         // console.log(url);
         // reload();
         // console.log(res.data);
@@ -56,6 +61,7 @@ import {
       } catch (error) {
         console.log(error);
       }
+      window.location.reload(false)
     };
   
     const handleChange = (e) => {
@@ -152,7 +158,7 @@ import {
                   mr={3}
                   // value={item.id}
                   onClick={(e) => {
-                    handleAdd(e);
+                    handleEdit(e)
                     onClose();
                   }}
                   marginTop="2rem"

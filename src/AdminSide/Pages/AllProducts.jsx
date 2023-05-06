@@ -29,9 +29,7 @@ const AllProducts = () => {
         <DIV>
         {products.length >0 && products.map((item)=>{
         return ( <div>
-             <AdminProdCard key={item.id} {...item}/>
-                  <EditProd item={item}/>
-                  <button>Delete</button>
+             <AdminProdCard key={item.id} {...item}/>   
         </div>
         )
         })}
@@ -49,6 +47,7 @@ const DIV = styled.div`
     display: grid;
     align-items: center;
     justify-content: center;
+    margin: auto;
     grid-template-columns: repeat(4,1fr);
     gap:20px;
 `
