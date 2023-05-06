@@ -9,10 +9,15 @@ import Blog from './Blog'
 import Classes from './Classes'
 import Coaches from './Coaches'
 import Home from './Home'
+
+import SingleProducts from './SingleProducts'
+import Product from './Product'
+
 import Member from './Member';
 import Contact from './Contact';
 import Memberships from '../AdminSide/Pages/Memberships';
 import Users from "../AdminSide/Pages/Users";
+
 
 
 const MainRoutes = () => {
@@ -30,8 +35,13 @@ const MainRoutes = () => {
         <Route path='/coaches' element={<Coaches/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/about-us' element={<AboutUs/>}></Route>
+
+        <Route path='/products' element={<Product/>}></Route>
+        <Route path='/products/:id' element={<SingleProducts/>}></Route>
+
         <Route path='/member' element={<Member/>}></Route>
         <Route path='/contact-us' element={<Contact/>}></Route>
+
       </Routes>
 
 
