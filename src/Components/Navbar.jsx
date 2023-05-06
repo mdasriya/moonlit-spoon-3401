@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link to="/about-us">ABOUT US</Link>
       </div>
       <Box style={{width:"15%",justifyContent:"space-between",display:"flex"}}>
-        <Link>
+        <Link to={"/products"}>
         <Button borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px" color="#06181C" fontWeight="bold">SHOP</Button>
         </Link>
         <Link>

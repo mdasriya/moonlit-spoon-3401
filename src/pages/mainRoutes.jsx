@@ -5,6 +5,8 @@ import Blog from './Blog'
 import Classes from './Classes'
 import Coaches from './Coaches'
 import Home from './Home'
+import SingleProducts from './SingleProducts'
+import Product from './Product'
 
 const mainRoutes = () => {
   return (
@@ -15,6 +17,8 @@ const mainRoutes = () => {
         <Route path='/coaches' element={<Coaches/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/about-us' element={<AboutUs/>}></Route>
+        <Route path='/products' element={<Product/>}></Route>
+        <Route path='/products/:id' element={<SingleProducts/>}></Route>
       </Routes>
     </div>
   )
