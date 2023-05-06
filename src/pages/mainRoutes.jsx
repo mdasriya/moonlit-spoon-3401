@@ -11,6 +11,8 @@ import Coaches from './Coaches'
 import Home from './Home'
 import Member from './Member';
 import Contact from './Contact';
+import Login from './Login';
+import SignUp from './SignUp';
 
 
 const MainRoutes = () => {
@@ -24,6 +26,8 @@ const MainRoutes = () => {
 
         <Route path='/classes' element={<Classes/>}></Route>
         <Route path='/coaches' element={<Coaches/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/signup' element={<SignUp/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/about-us' element={<AboutUs/>}></Route>
         <Route path='/member' element={<Member/>}></Route>
