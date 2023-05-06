@@ -108,7 +108,7 @@ export default function Member() {
                 height: "2px",
                 backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
             }}></hr>
-            <Box py={12} position="relative">
+            <Box backgroundColor="#091315" marginTop="5%" py={12} position="relative">
                 <VStack spacing={2} textAlign="center" marginBottom="20px">
                     <Heading as="h1" color="#E1F4F6">
                         PRICING PLAN FOR TEAMS OF ALL SIZES
@@ -125,7 +125,7 @@ export default function Member() {
                     spacing={{ base: 4, lg: 10 }}
                     py={10}>
                     <PriceWrapper>
-                        <Box border="solid #27596A" color="#E1F4F6" marginRight="10px" borderRadius="10px">
+                        <Box border="solid #27596A" color="#E1F4F6" borderRadius="10px">
                             <Box py={4} px={12} textAlign="start" bgColor="#06181C">
                                 <Text fontWeight="500" fontSize="x-large" color="#2FB0DA" >
                                     Individual
@@ -160,7 +160,7 @@ export default function Member() {
                                     </ListItem>
                                 </List>
                                 <Box w="80%" pt={7}>
-                                    <Button onMouseEnter={IndividualPlan} onClick={onOpen} w="full" colorScheme="red" variant="outline" color="#06181C" bgColor="#E1F4F6" width="90%" padding="5px" marginTop="20%" marginBottom="8%" fontWeight="bold" cursor="pointer" borderRadius="5px">
+                                    <Button onMouseEnter={IndividualPlan} onClick={onOpen} w="full" colorScheme="red"  color="#06181C" bgColor="#2FB0DA" width="90%" padding="5px" marginTop="20%" marginBottom="8%" fontWeight="bold" cursor="pointer" borderRadius="5px">
                                         MONTHLY BILLING
                                     </Button>
                                 </Box>
@@ -170,7 +170,7 @@ export default function Member() {
                     </PriceWrapper>
 
                     <PriceWrapper>
-                        <Box position="relative" border="solid #27596A" color="#E1F4F6" marginRight="10px" borderRadius="10px">
+                        <Box position="relative" border="solid #27596A" color="#E1F4F6" borderRadius="10px">
                             <Box
                                 position="absolute"
                                 top="-25px"
@@ -275,7 +275,7 @@ export default function Member() {
                                     </ListItem>
                                 </List>
                                 <Box w="80%" pt={7}>
-                                    <Button onMouseEnter={VipPlan} onClick={onOpen} variant='ghost' colorScheme="red" color="#06181C" bgColor="#E1F4F6" width="90%" padding="5px" marginTop="20%" marginBottom="8%" fontWeight="bold" cursor="pointer" borderRadius="5px">
+                                    <Button onMouseEnter={VipPlan} onClick={onOpen} colorScheme="red" color="#06181C" bgColor="#2FB0DA" width="90%" padding="5px" marginTop="20%" marginBottom="8%" fontWeight="bold" cursor="pointer" borderRadius="5px">
                                         MONTHLY BILLING
                                     </Button>
 
@@ -284,22 +284,22 @@ export default function Member() {
                                         finalFocusRef={finalRef}
                                         isOpen={isOpen}
                                         onClose={onClose}
-                                        size={"full"}
+                                        size={"medium"}
 
                                     >
                                         {/* <ModalOverlay /> */}
-                                        <ModalContent padding="50px" mt="150px" ml="500px" mr="200px" bgColor="#06181C" width="500px" height="400px" borderRadius="30px" color="white" border="solid" borderColor="#2FB0DA">
+                                        <ModalContent marginBottom="100px" paddingTop="50px" paddingLeft="50px"  ml="300px" mr="200px" bgColor="#06181C" width="500px" borderRadius="30px" color="white" border="solid" borderColor="#2FB0DA" mt="100px" height="80%">
                                             {/* <ModalCloseButton paddingRight="20px"/> */}
                                             
 
-                                            <ModalBody pb="20px">
+                                            <ModalBody paddingRight="50px">
 
                                                 <Text>Your Plan : </Text>
-                                                <Text>Plan Type : {planType}</Text>
+                                                <Text >Plan Type : {planType}</Text>
 
                                                 <Text>Price : ${price}</Text>
 
-                                                <ModalHeader mb="10px">Entre Your Details</ModalHeader>
+                                                <ModalHeader paddingLeft="0px">Entre Your Details</ModalHeader>
                                                 <FormControl>
                                                     <FormLabel>First name</FormLabel>
                                                     <Input value={firstname} onChange={(e)=>setFirstName(e.target.value)} type="text" ref={initialRef} placeholder='First name' />
@@ -316,10 +316,10 @@ export default function Member() {
                                             </ModalBody>
 
                                             <ModalFooter paddingLeft="60px">
-                                                <Button borderRadius="7px" width="100px" height="30px" variant="ghost" bgColor="#2FB0DA" colorScheme='blue' onClick={addDetails}>
+                                                <Button position="absolute" top="500px" borderRadius="7px" width="100px" height="40px" bgColor="#2FB0DA" colorScheme="red" onClick={addDetails}>
                                                     Save
                                                 </Button>
-                                                <Button variant="ghost" bgColor="#2FB0DA" mt="-180%" mr="-7%" colorScheme='blue' onClick={onClose}>X</Button>
+                                                <Button size="md"  bgColor="#2FB0DA" mt="-300%" mr="-2%" colorScheme="red" onClick={onClose}>X</Button>
                                             </ModalFooter>
                                         </ModalContent>
                                     </Modal>

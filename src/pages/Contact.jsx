@@ -31,7 +31,7 @@ export const Contact = () => {
                                             backgroundColor: "#091315",
                                             height: "40px",
                                             width: "240px",
-                                            borderColor: "#06181C",
+                                            border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
                                             paddingLeft: "5px",
@@ -50,7 +50,7 @@ export const Contact = () => {
                                             backgroundColor: "#091315",
                                             height: "40px",
                                             width: "240px",
-                                            borderColor: "#06181C",
+                                            border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
                                             paddingLeft: "5px",
@@ -71,7 +71,7 @@ export const Contact = () => {
                                             backgroundColor: "#091315",
                                             height: "40px",
                                             width: "240px",
-                                            borderColor: "#06181C",
+                                            border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
                                             paddingLeft: "5px",
@@ -90,7 +90,7 @@ export const Contact = () => {
                                             backgroundColor: "#091315",
                                             height: "40px",
                                             width: "240px",
-                                            borderColor: "#06181C",
+                                            border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
                                             paddingLeft: "5px",
@@ -110,7 +110,7 @@ export const Contact = () => {
                                             backgroundColor: "#091315",
                                             height: "100px",
                                             width: "510px",
-                                            borderColor: "#2FB0DA",
+                                            border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
                                             color: "gray",
@@ -132,7 +132,7 @@ export const Contact = () => {
                                         backgroundColor: "#2FB0DA",
                                         height: "40px",
                                         width: "20%",
-                                        borderColor: "#06181C",
+                                        border:"solid #2FB0DA",
                                         borderRadius: "8px",
                                         marginTop: "6px",
                                         color: "#06181C",
@@ -140,7 +140,8 @@ export const Contact = () => {
                                         fontWeight: "bold",
                                         marginLeft: "5px",
                                         cursor: "pointer",
-                                        fontSize: "18px"
+                                        fontSize: "18px",
+                                    
                                     }}
                                     type="submit"
                                 ></input>
