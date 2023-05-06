@@ -21,8 +21,17 @@ const NavAdmin = () => {
         <h4 className="names">Add Products</h4>
         </Link>
         
+        <Link to={"/memberships"}>
         <h4 className="names">Memberships</h4>
-        <h4 className="names">Users</h4>
+        </Link>
+
+      
+      <Link to={"/users"}>
+      <h4 className="names">Users</h4>
+      </Link>
+       
+
+
     </DIV>
   )
 }
