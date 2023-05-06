@@ -53,14 +53,6 @@ export const addProductFromAdmin =(payload)=>async(dispatch)=>{
     }
 }
 
-//edit products 
-
-// export const handleEdit = ()=>{
-//     return 1 
-// }
-
-
-
 //handle delete 
 
 export const handleDelete =async(id)=>{
@@ -72,4 +64,29 @@ export const handleDelete =async(id)=>{
         console.log(error);
     }
     window.location.reload();
+}
+
+
+// /----memberships get 
+
+export const getMemberships=async()=>{
+        try {
+            let res= await axios.get(`${url}/memberships`)
+            let data= res.data
+            return data 
+
+        } catch (error) {
+            console.log(error);
+        }
+}
+
+export const getUsers=async()=>{
+    try {
+        let res = await axios.get(`${url}/users`);
+        let data= res.data
+        return data 
+        
+    } catch (error) {
+        console.log(error);
+    }
 }

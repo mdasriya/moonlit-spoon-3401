@@ -11,6 +11,8 @@ import Coaches from './Coaches'
 import Home from './Home'
 import Member from './Member';
 import Contact from './Contact';
+import Memberships from '../AdminSide/Pages/Memberships';
+import Users from "../AdminSide/Pages/Users";
 
 
 const MainRoutes = () => {
@@ -21,6 +23,8 @@ const MainRoutes = () => {
       <Route path="/allproducts" element={<AllProducts/>}/>
       <Route path='/addProducts' element={<AddProducts/>}/>
       <Route path='/' element={<Home/>}></Route>
+      <Route path='/memberships' element={<Memberships/>}/>
+      <Route path='/users' element={<Users/>}/>
 
         <Route path='/classes' element={<Classes/>}></Route>
         <Route path='/coaches' element={<Coaches/>}></Route>
