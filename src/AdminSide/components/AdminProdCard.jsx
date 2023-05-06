@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { handleDelete, handleEdit } from '../Redux-Admin/action'
+import EditProd from '../components/EditProd';
+import { Button } from '@chakra-ui/react';
 
 const AdminProdCard = ({...item}) => {
    
@@ -13,12 +14,17 @@ const AdminProdCard = ({...item}) => {
     return (
     <DIV>
         <img id='imgg' src={image} alt='image_prod'/>
-        <h4>{name}</h4>
-        <h4>Price : ₹{price}/-</h4>
-        <h4>Price Cut :  ₹{price_cut}/-</h4>
-        <h4>Offer : {offer}</h4>
-        <button onClick={()=>handleEdit(id)} className='crud-e'>Edit</button>
-        <button onClick={()=>handleDelete(id)} className='crud-d'>Delete</button>
+        <h4 id='name' className='det'>{name}</h4>
+        <h4 className='det'>Price : ₹{price}/-</h4>
+        <h4 className='det'>Price Cut :  ₹{price_cut}/-</h4>
+        <h4 className='det'>Offer : {offer}</h4>
+        {/* <button onClick={()=>handleEdit(id)} className='crud-e'>Edit</button> */}
+        {/* <button onClick={()=>handleDelete(id)} className='crud-d'>Delete</button> */}
+        <div className='modalss'>
+        <EditProd  item={item}/>
+        <Button className='crud-d'>Delete</Button>
+        </div>
+        
     </DIV>
   )
 }
@@ -41,6 +47,17 @@ const DIV = styled.div`
     #imgg{
           margin: auto;
     }
+    .det{
+        margin: auto;
+        display:flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #name{
+       color: crimson;
+    }
 
     .crud-e{
         border: 1px solid black;
@@ -52,10 +69,14 @@ const DIV = styled.div`
     }
 
     .crud-d{
-        border: 1px solid black;
-        background-color: #f03d3d;
-        color:white;
-        width: 30%;
-        height: 6%;
+        margin-left: 10px;
+    }
+    .modalss{
+        margin: auto;
+        display:flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        
     }
 `

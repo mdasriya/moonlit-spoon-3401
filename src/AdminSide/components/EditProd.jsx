@@ -15,7 +15,7 @@ import {
     Flex,
   } from "@chakra-ui/react";
   import axios from "axios";
-  
+  // import { handleDelete, handleEdit } from '../Redux-Admin/action'
   import { useState } from "react";
   
   export default function EditProd({ item }) {
@@ -40,7 +40,7 @@ import {
     // const [categoryState, setCategoryState]= useState(category);
     // const [lamb, setLamb] = useState("");
   
-    const handleAdd = async (e) => {
+    const handleEdit = async (e) => {
       e.preventDefault();
   
       try {
@@ -152,7 +152,7 @@ import {
                   mr={3}
                   // value={item.id}
                   onClick={(e) => {
-                    handleAdd(e);
+                    handleEdit(e)
                     onClose();
                   }}
                   marginTop="2rem"
