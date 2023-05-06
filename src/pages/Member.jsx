@@ -53,47 +53,50 @@ export default function Member() {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
 
-    const [price,setPrice] = useState("");
-    const [planType,setPlanType] = useState("");
-    const [firstname,setFirstName] = useState("")
-    const [lasttname,setLastName] = useState("")
-    const [email,setEmail] = useState("")
+    const [price, setPrice] = useState("");
+    const [planType, setPlanType] = useState("");
+    const [firstname, setFirstName] = useState("")
+    const [lasttname, setLastName] = useState("")
+    const [email, setEmail] = useState("")
 
     const dispatch = useDispatch();
 
-    const IndividualPlan = ()=>{
+    const IndividualPlan = () => {
 
         setPrice(55);
         setPlanType("Individual")
     }
-    const PlusPlan = ()=>{
+    const PlusPlan = () => {
 
         setPrice(80);
         setPlanType("BeFit Plus")
     }
-    const VipPlan = ()=>{
+    const VipPlan = () => {
 
         setPrice(98);
         setPlanType("VIP")
     }
 
-    const addDetails = ()=>{
+    const addDetails = () => {
         let flag = false;
         let data = {
             price,
             planType,
-            fullname : `${firstname} ${lasttname}`,
+            fullname: `${firstname} ${lasttname}`,
             email
         }
-        if(data.fullname!=="" && data.email!==""){
+        if (data.fullname !== "" && data.email !== "") {
             // for(let i=0;i<Data.length;i++){
 
             // }
             dispatch(postMembership(data));
-
+            window.alert("Plan added successfully")
             // console.log(Data)
         }
-        
+        else {
+
+            window.alert("Something went wrong")
+        }
 
         setFirstName("");
         setLastName("");
@@ -108,8 +111,8 @@ export default function Member() {
                 height: "2px",
                 backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
             }}></hr>
-            <Box backgroundColor="#091315" marginTop="5%" py={12} position="relative">
-                <VStack spacing={2} textAlign="center" marginBottom="20px">
+            <Box backgroundColor="#091315" marginTop="6%" py={12} position="relative">
+                <VStack spacing={2} textAlign="center">
                     <Heading as="h1" color="#E1F4F6">
                         PRICING PLAN FOR TEAMS OF ALL SIZES
                     </Heading>
@@ -160,7 +163,7 @@ export default function Member() {
                                     </ListItem>
                                 </List>
                                 <Box w="80%" pt={7}>
-                                    <Button onMouseEnter={IndividualPlan} onClick={onOpen} w="full" colorScheme="red"  color="#06181C" bgColor="#2FB0DA" width="90%" padding="5px" marginTop="20%" marginBottom="8%" fontWeight="bold" cursor="pointer" borderRadius="5px">
+                                    <Button onMouseEnter={IndividualPlan} onClick={onOpen} w="full" colorScheme="red" color="#06181C" bgColor="#2FB0DA" width="90%" padding="5px" marginTop="20%" marginBottom="8%" fontWeight="bold" cursor="pointer" borderRadius="5px">
                                         MONTHLY BILLING
                                     </Button>
                                 </Box>
@@ -180,7 +183,7 @@ export default function Member() {
                                     textTransform="uppercase"
                                     bgColor="#E65100"
                                     px={3}
-                                    py={1}
+                                    py={2}
                                     color="black"
                                     fontSize="sm"
                                     fontWeight="600"
@@ -288,9 +291,9 @@ export default function Member() {
 
                                     >
                                         {/* <ModalOverlay /> */}
-                                        <ModalContent marginBottom="100px" paddingTop="50px" paddingLeft="50px"  ml="300px" mr="200px" bgColor="#06181C" width="500px" borderRadius="30px" color="white" border="solid" borderColor="#2FB0DA" mt="100px" height="80%">
+                                        <ModalContent marginBottom="100px" paddingTop="50px" paddingLeft="50px" ml="200px" mr="200px" bgColor="#06181C" width="500px" borderRadius="30px" color="white" border="solid" borderColor="#2FB0DA" mt="100px" height="80%">
                                             {/* <ModalCloseButton paddingRight="20px"/> */}
-                                            
+
 
                                             <ModalBody paddingRight="50px">
 
@@ -302,16 +305,16 @@ export default function Member() {
                                                 <ModalHeader paddingLeft="0px">Entre Your Details</ModalHeader>
                                                 <FormControl>
                                                     <FormLabel>First name</FormLabel>
-                                                    <Input value={firstname} onChange={(e)=>setFirstName(e.target.value)} type="text" ref={initialRef} placeholder='First name' />
+                                                    <Input value={firstname} onChange={(e) => setFirstName(e.target.value)} type="text" ref={initialRef} placeholder='First name' />
                                                 </FormControl>
 
                                                 <FormControl mt="20px">
                                                     <FormLabel>Last name</FormLabel>
-                                                    <Input  value={lasttname} onChange={(e)=>setLastName(e.target.value)} type="text" placeholder='Last name' />
+                                                    <Input value={lasttname} onChange={(e) => setLastName(e.target.value)} type="text" placeholder='Last name' />
                                                 </FormControl>
                                                 <FormControl mt="20px">
                                                     <FormLabel>Email</FormLabel>
-                                                    <Input  value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Email' />
+                                                    <Input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Email' />
                                                 </FormControl>
                                             </ModalBody>
 
@@ -319,7 +322,7 @@ export default function Member() {
                                                 <Button position="absolute" top="500px" borderRadius="7px" width="100px" height="40px" bgColor="#2FB0DA" colorScheme="red" onClick={addDetails}>
                                                     Save
                                                 </Button>
-                                                <Button size="md"  bgColor="#2FB0DA" mt="-300%" mr="-2%" colorScheme="red" onClick={onClose}>X</Button>
+                                                <Button size="md" bgColor="#2FB0DA" mt="-300%" mr="-2%" colorScheme="red" onClick={onClose}>X</Button>
                                             </ModalFooter>
                                         </ModalContent>
                                     </Modal>

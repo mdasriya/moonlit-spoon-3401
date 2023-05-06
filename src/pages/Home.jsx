@@ -114,7 +114,7 @@ const Home = () => {
             <br />
             <Box>
                 <Box fontSize="18px" paddingLeft="5%" color="#E1F4F6" textAlign="start" marginRight="10%">
-                    <Heading marginTop="10px">GROUP TRAININGS</Heading>
+                    <Heading marginBottom="10px">GROUP TRAININGS</Heading>
                     <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt odio voluptas harum ea, expedita dolor accusantium possimus corrupti necessitatibus nesciunt, quas consequatur optio architecto facilis suscipit commodi quis, repudiandae tempore. Delectus a quaerat eaque pariatur!</Text>
                 </Box>
                 <br />
