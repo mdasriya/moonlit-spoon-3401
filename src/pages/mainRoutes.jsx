@@ -9,6 +9,8 @@ import Blog from './Blog'
 import Classes from './Classes'
 import Coaches from './Coaches'
 import Home from './Home'
+import Member from './Member';
+import Contact from './Contact';
 
 
 const MainRoutes = () => {
@@ -24,6 +26,8 @@ const MainRoutes = () => {
         <Route path='/coaches' element={<Coaches/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/about-us' element={<AboutUs/>}></Route>
+        <Route path='/member' element={<Member/>}></Route>
+        <Route path='/contact-us' element={<Contact/>}></Route>
       </Routes>
 
 

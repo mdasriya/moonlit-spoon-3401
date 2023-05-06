@@ -49,6 +49,7 @@ export default Blog;
 const DIV = styled.div`
   background-color: #091315;
   color: #e1f4f6;
+  margin-top:7%;
   img {
     width: 100vw;
     height: 70vh;
