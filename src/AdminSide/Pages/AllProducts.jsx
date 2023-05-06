@@ -29,9 +29,7 @@ const AllProducts = () => {
         <DIV>
         {products.length >0 && products.map((item)=>{
         return ( <div>
-             <AdminProdCard key={item.id} {...item}/>
-                
-                 
+             <AdminProdCard key={item.id} {...item}/>   
         </div>
         )
         })}

@@ -12,12 +12,12 @@ const AdminProdCard = ({...item}) => {
 
 
     return (
-    <DIV>
+    <DIV key={item.id}>
         <img id='imgg' src={image} alt='image_prod'/>
         <h4 id='name' className='det'>{name}</h4>
         <h4 className='det'>Price : ₹{price}/-</h4>
         <h4 className='det'>Price Cut :  ₹{price_cut}/-</h4>
-        <h4 className='det'>Offer : {offer}</h4>
+        <h4 className='det'>Offer : -{offer}%</h4>
         {/* <button onClick={()=>handleEdit(id)} className='crud-e'>Edit</button> */}
         {/* <button onClick={()=>handleDelete(id)} className='crud-d'>Delete</button> */}
         <div className='modalss'>
