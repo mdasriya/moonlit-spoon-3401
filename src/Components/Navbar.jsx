@@ -8,10 +8,10 @@ const Navbar = () => {
     textDecoration:"none"
   }
   return (
-    <Box style={{ position:"fixed", display: "flex", justifyContent: "space-around", width: "100%", alignItems: "center", textDecoration: "none",top:"0",backgroundColor:"#06181C"}}>
+    <Box style={{position:"fixed",zIndex:"100", display: "flex", justifyContent: "space-around", width: "100%", alignItems: "center", textDecoration: "none",top:"0",backgroundColor:"#06181C"}}>
       <Box style={{ width: "10%" }}>
         <Link to="/#" smooth>
-          <Image src='https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/wzhws0lryys88fh4jk0t' width="100px">
+          <Image src='https://i.ibb.co/vPM31c0/Logo.png' width="100px">
           </Image>
         </Link>
 
