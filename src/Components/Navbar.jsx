@@ -8,7 +8,9 @@ const Navbar = () => {
     textDecoration:"none"
   }
   return (
-    <Box style={{position:"fixed",zIndex:"100", display: "flex", justifyContent: "space-around", width: "100%", alignItems: "center", textDecoration: "none",top:"0",backgroundColor:"#06181C"}}>
+
+    <Box style={{ position:"fixed",zIndex:"100", display: "flex", justifyContent: "space-around", width: "100%", alignItems: "center", textDecoration: "none",top:"0",backgroundColor:"#06181C"}}>
+
       <Box style={{ width: "10%" }}>
         <Link to="/#" smooth>
           <Image src='https://i.ibb.co/vPM31c0/Logo.png' width="100px">
