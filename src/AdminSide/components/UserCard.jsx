@@ -20,7 +20,7 @@ const DIV = styled.div`
     
     margin: auto;
     border:1px solid grey;
-
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     .user-ad{
         display: flex;
         align-items: center;
