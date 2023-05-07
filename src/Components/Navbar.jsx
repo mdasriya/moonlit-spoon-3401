@@ -25,9 +25,11 @@ const Navbar = () => {
         <Link style={myStyle} to="/#contact-us" smooth>CONTACT US</Link>
 
       </div>
-      <Box style={{ width: "15%", justifyContent: "space-between", display: "flex" }}>
-        <Link>
-          <Button cursor="pointer" borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px" color="#06181C" fontWeight="bold">SHOP</Button>
+
+      <Box style={{width:"15%",justifyContent:"space-between",display:"flex"}}>
+        <Link to={"/products"}>
+        <Button borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px" color="#06181C" fontWeight="bold">SHOP</Button>
+
         </Link>
         <Link to="/member">
           <Button cursor="pointer" borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px" color="#06181C" fontWeight="bold">BECOME A MEMBER</Button>

@@ -1,5 +1,6 @@
 
 import './App.css';
+
 import MainRoutes from "./pages/mainRoutes";
 
 import { useEffect, useState } from "react"
@@ -12,6 +13,7 @@ function App() {
   const [state, setState] = useState(true);
 
   useEffect(() => {
+
 
     setTimeout(() => {
       setState(false);
@@ -36,6 +38,7 @@ function App() {
           <MainRoutes />
         </>
       }
+
 
     </div>
   );
