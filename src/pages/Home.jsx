@@ -6,6 +6,7 @@ import Coaches from './Coaches'
 
 import Contact from './Contact'
 const Home = () => {
+    
     return (
         <><hr style={{
             marginTop: "0px",
@@ -22,7 +23,7 @@ const Home = () => {
                     <Text marginTop="10px" color="white">
                         GET MORE WITH LOW-COST TRAINING PROGRAMS AND ADVACED FEATURES
                     </Text>
-                    <Button marginTop="10px" cursor="pointer" width="13%" borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px" color="#06181C" fontWeight="bold">JOIN NOW</Button>
+                    <Button marginTop="10px" cursor="pointer" width="13%" borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px" color="#06181C" fontWeight="bold" position="static">JOIN NOW</Button>
                     <br />
                     <Image></Image>
                     <Image></Image>
@@ -61,8 +62,8 @@ const Home = () => {
                 <br />
                 <br />
                 <Box >
-                    <Box className="parent" position="relative" top="0" bottom="0" display="flex" width="100%" margin="auto" justifyContent="center" color="#2FB0DA">
-                        <Box textAlign="start" width="30%" position="relative" top="0" bottom="0">
+                    <Box className="parent"  top="0" bottom="0" display="flex" width="100%" margin="auto" justifyContent="center" color="#2FB0DA">
+                        <Box textAlign="start" width="30%" >
                             <Image width="100%" className="image1" src="https://gray-kauz-prod.cdn.arcpublishing.com/resizer/DAHKaf3_iD_x8AqbiNnSGdhuwcQ=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/GMXYEKQVPNEBLALOWWECZV5Q7A.jpg" height="250px"></Image>
                             <Text marginTop="10px">MARTIAL ARTS HALL</Text>
                             <hr style={{
@@ -72,7 +73,7 @@ const Home = () => {
                                 backgroundImage: "linear-gradient(to right,  #2FD0DA,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
                             }}></hr>
                         </Box>
-                        <Box textAlign="start" width="30%" position="relative" top="10" bottom="20">
+                        <Box textAlign="start" width="30%" marginTop="20px">
                             <Image width="100%" className="image2" src="https://images.squarespace-cdn.com/content/v1/582173226b8f5b121612ca03/1675724866236-GUX1ULD6NI5BPP6R0ASF/Gym_Hawthorn_Group_Classes-77.jpg" height="250px"></Image>
                             <Text marginTop="10px">GROUP TRAINING HALL</Text>
                             <hr style={{
@@ -82,7 +83,7 @@ const Home = () => {
                                 backgroundImage: "linear-gradient(to right,  #2FD0DA,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
                             }}></hr>
                         </Box>
-                        <Box textAlign="start" width="30%" position="relative" top="20" bottom="30">
+                        <Box textAlign="start" width="30%" marginTop="40px">
                             <Image width="100%" className="image2" src="https://content.jdmagicbox.com/comp/mumbai/z6/022pxx22.xx22.210217121936.p9z6/catalogue/yoga365-borivali-west-mumbai-yoga-centres-wkyqftocqa.jpg" height="250px"></Image>
                             <Text marginTop="10px">YOGA HALL</Text>
                             <hr style={{

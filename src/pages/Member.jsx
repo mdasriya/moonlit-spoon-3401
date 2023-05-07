@@ -121,9 +121,9 @@ export default function Member() {
                 height: "2px",
                 backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
             }}></hr>
-            <Box backgroundColor="#091315" marginTop="6%" py={12} position="relative">
+            <Box backgroundColor="#091315" marginTop="6%" >
                 <VStack spacing={2} textAlign="center">
-                    <Heading as="h1" color="#E1F4F6">
+                    <Heading marginTop="15px" as="h1" color="#E1F4F6">
                         PRICING PLAN FOR TEAMS OF ALL SIZES
                     </Heading>
                     <Text fontSize="lg" color="#E1F4F6">
