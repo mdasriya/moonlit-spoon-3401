@@ -49,6 +49,7 @@ const DIV = styled.div`
 text-align: center;
 cursor: pointer;
 display: block;
+
   top: 0px;
   position: relative;
   padding-left: 5px;

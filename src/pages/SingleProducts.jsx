@@ -7,6 +7,7 @@ import { Text} from '@chakra-ui/react'
 import { useToast } from '@chakra-ui/react'
 // import { cartProducts } from '../redux/productReducer/action'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 const SingleProducts = () => {
   const toast = useToast()
   const [count, setCount] = useState(1)
@@ -149,6 +150,10 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
  
 <div class="main">
 <button className='cartIconButton' onClick={handleCart}>Add to Cart</button>
+<Link to={"/cart"}>
+
+<button>cart</button>
+</Link>
 </div>
 </div>
    </div>
@@ -167,12 +172,13 @@ const DIV = styled.div`
    font-weight: 400;
    padding: 10px;
    justify-content: space-between;
-   
+margin-top: 8%;
 .left{
     /* border: 1px solid black; */
     width: 26%;
     height: 60%;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 3px;
 }
 .middle{
     /* border: 1px solid black; */
@@ -181,6 +187,7 @@ display: flex;
 flex-direction: column;
 text-align: start;
 box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+border-radius: 3px;
 }
 .fit{
 font-size: 20px;

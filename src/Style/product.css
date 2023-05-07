@@ -6,6 +6,7 @@
     /* border: 1px solid rgb(0, 0, 0); */
     width: 100%;
     height: auto;
+    margin-top: 8%;
 }
 
 .product {
@@ -44,9 +45,12 @@ width: 20%;
  /* border: 1px solid blue; */
  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 /* border: 1px solid red; */
+
 }
 .middleright{
 width: 80%;
+height: 1020px;
+overflow-y: auto;
 /* border: 1px solid rgb(0, 47, 255); */
 }
 .image{
