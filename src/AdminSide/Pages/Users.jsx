@@ -33,8 +33,9 @@ export default Users
 const DIV = styled.div`
     display: grid;
     margin: auto;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     justify-content: center;
     align-items: center;
     gap:20px;
+    margin-top: 20px;
 `
