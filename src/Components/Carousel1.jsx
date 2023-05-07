@@ -51,7 +51,7 @@ const Carousel1 = () => {
         swipeable
         style
       >
-        <div>
+        <div >
           <img
             src="https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
             alt=""
