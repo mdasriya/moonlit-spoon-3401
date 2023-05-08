@@ -52,7 +52,7 @@ const DIV = styled.div`
   margin-top:4.7%;
   img {
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
   }
   .banner {
     position: relative;

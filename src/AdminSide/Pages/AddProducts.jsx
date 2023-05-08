@@ -25,7 +25,7 @@ const AddProducts = () => {
   const [formState, setFormState] = useState(initial);
   const dispatch = useDispatch();
   const toast = useToast();
-  const positions = ["top"];
+  const positions = ["bottom-right"];
   
   console.log(formState);
   
@@ -55,7 +55,6 @@ const AddProducts = () => {
         borderColor="gray.400"
         p={"20px"}
         mt={"70px"}
-        className="container"
       >
         <Heading mb={"10px"}>Add Product Form</Heading>
         <FormControl>
@@ -135,22 +134,11 @@ const AddProducts = () => {
             <option value={formState.handbags}>Handbags</option>
           </Select> */}
           <Button
-            // onClick={handleSubmit}
+            onClick={handleSubmit}
             colorScheme="teal"
             variant="outline"
             size="md"
             mt={"20px"}
-            onClick={() =>
-              toast({
-                handleSubmit,
-                title: 'Account created.',
-                description: "We've created your account for you.",
-                status: 'success',
-                duration: 9000,
-                isClosable: true,
-                position: 'top',
-              })
-            }
           >
             Add Product
           </Button>
@@ -161,5 +149,4 @@ const AddProducts = () => {
 };
 
 export default AddProducts;
-
 
