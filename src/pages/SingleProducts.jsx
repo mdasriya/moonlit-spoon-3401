@@ -8,7 +8,9 @@ import { useToast } from '@chakra-ui/react'
 // import { cartProducts } from '../redux/productReducer/action'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Cart from './Cart'
 const SingleProducts = () => {
+  
   const toast = useToast()
   const [count, setCount] = useState(1)
   const [weight, setWeight] = useState(1)
@@ -17,17 +19,17 @@ const SingleProducts = () => {
     const dispatch = useDispatch()
 const product  = useSelector((store)=> store.productReducer.products)  
 
+localStorage.setItem("id", id)
 
 
-
-
+let idnew = localStorage.getItem("id")
 useEffect(()=> {
-    const data = product.find((el)=>el.id === +id)
-setData(data)
+  const data = product.find((el)=>el.id === +idnew)
+  setData(data)
 },[])
 
-let finalPrice = data.price*weight
-let saveprice = (data.price_cut - data.price)
+let finalPrice = data?.price*weight
+let saveprice = (data?.price_cut - data?.price)
 
 const handleCart = () => {
   toast({
@@ -40,7 +42,11 @@ const handleCart = () => {
   })
   let cartdata = {...data, price:finalPrice, quantity:count, weight:weight}
 axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
+
 }
+
+
+
 
   return (
 <div>
@@ -49,8 +55,8 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
    <div className='left'>
 
     <div className='first'>
-    <h5 className='top-left'>-{data.offer}%</h5>
-    <img src={data.image} alt="" />
+    <h5 className='top-left'>-{data?.offer}%</h5>
+    <img src={data?.image} alt="" />
    </div>
     </div>
 
@@ -59,14 +65,14 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
 
    <div className='middle'>
   <p className='fit'>Be-Fit</p>
-<p>{data.name}</p>
+<p>{data?.name}</p>
 <div className='star'>
             <i className="fa-sharp fa-solid fa-star"></i>
             <i className="fa-sharp fa-solid fa-star"></i>
             <i className="fa-sharp fa-solid fa-star"></i>
             <i className="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-            <span>{data.rating_count} Reviews</span>
+            <i className="fa-solid fa-star-half-stroke"></i>
+            <span>{data?.rating_count} Reviews</span>
             </div>
 
           <div className='dabba'>
@@ -121,22 +127,22 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
   
     </div>
 <div className='buttom' >
-   <button value={"1"} onClick={(e)=>setWeight(e.target.value)}>1kg</button>
+   <button value={"1"}  onClick={(e)=>setWeight(e.target.value)}>1kg</button>
    <button value={"2"} onClick={(e)=>setWeight(e.target.value)}>2kg</button>
    <button value={"3"} onClick={(e)=>setWeight(e.target.value)}>3kg</button>
 </div><br />
   <hr /><br />
   <div className='mrp'>
     <p>MRP : </p>
-    <Text opacity={".5"} as='del' fontSize={"xl"}>₹{" "}{data.price_cut}</Text>
+    <Text opacity={".5"} as='del' fontSize={"xl"}>₹{" "}{data?.price_cut}</Text>
   </div>
   <div className='mrp'>
     <p>selling Price : </p>
-    <Text color={"red.600"} as={"b"} fontSize={"xl"}>₹({finalPrice})</Text>
+    <Text color={"red.600"} as={"b"} fontSize={"xl"}>₹{finalPrice}</Text>
   </div>
   <div className='cutmrp'>
     <p>You Save:{" "}</p>
-    <Text color={"red.600"}>₹{saveprice} ({data.offer}%)</Text>
+    <Text color={"red.600"}>₹{saveprice} ({data?.offer}%)</Text>
   </div>
   <Text className='opacity'>Inclusive of all taxes </Text><br />
   <Text className='stock'>In Stock</Text>
@@ -148,20 +154,19 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
   </div>
   
  
-<div class="main">
+<div className="main">
 <button className='cartIconButton' onClick={handleCart}>Add to Cart</button>
 <Link to={"/cart"}>
 
-<button>cart</button>
 </Link>
 </div>
 </div>
    </div>
     </DIV>
+    <Cart/>
 </div>
   )
 }
-
 export default SingleProducts;
 
 const DIV = styled.div`

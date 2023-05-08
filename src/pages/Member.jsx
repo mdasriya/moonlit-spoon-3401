@@ -121,7 +121,7 @@ export default function Member() {
                 height: "2px",
                 backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), #2FD0DA, rgba(0, 0, 0, 0))"
             }}></hr>
-            <Box backgroundColor="#091315" marginTop="6%" >
+            <Box backgroundColor="#091315" paddingTop={{xl:"6%",md:"7%",base:"15%",sm:"12%"}} >
                 <VStack spacing={2} textAlign="center">
                     <Heading marginTop="15px" as="h1" color="#E1F4F6">
                         PRICING PLAN FOR TEAMS OF ALL SIZES
@@ -132,9 +132,12 @@ export default function Member() {
                     </Text>
                 </VStack>
                 <Stack
-                    direction={{ base: 'column', md: 'row' }}
-                    textAlign="center"
-                    justify="center"
+               
+                width="80%"
+                margin="auto"
+                    direction={{ base: 'column', md: 'row',xl:"row" }}
+                    textAlign={{ base: 'center', md: 'center',xl:"center" }}
+                    justifyContent={{ base: 'center', md: 'center',xl:"center" }}
                     spacing={{ base: 4, lg: 10 }}
                     py={10}>
                     <PriceWrapper>
@@ -252,7 +255,7 @@ export default function Member() {
                         </Box>
                     </PriceWrapper>
                     <PriceWrapper >
-                        <Box bgColor="#06181C" border="solid #27596A" color="#E1F4F6" borderRadius="10px">
+                        <Box width="100%" bgColor="#06181C" border="solid #27596A" color="#E1F4F6" borderRadius="10px">
                             <Box py={4} px={12} textAlign="start">
                                 <Text fontWeight="500" fontSize="x-large" color="#2FB0DA">
                                     VIP
@@ -307,29 +310,29 @@ export default function Member() {
 
                                             <ModalBody paddingRight="50px">
 
-                                                <Text fontSize="20px">Your Plan : </Text>
-                                                <Text >Plan Type : {planType}</Text>
+                                                <Text color="#2FB0DA" fontSize="30px">Your Plan  </Text>
+                                                <Text fontSize="20px">Plan Type : {planType}</Text>
 
-                                                <Text>Price : ${price}</Text>
+                                                <Text fontSize="20px">Price : ${price}</Text>
 
-                                                <ModalHeader paddingLeft="0px">Entre Your Details</ModalHeader>
-                                                <FormControl>
+                                                <ModalHeader fontSize="30px" paddingLeft="0px">Entre Your Details</ModalHeader>
+                                                <FormControl paddingRight={2}>
                                                     <FormLabel>First name</FormLabel>
                                                     <Input value={firstname} onChange={(e) => setFirstName(e.target.value)} type="text" ref={initialRef} placeholder='First name' />
                                                 </FormControl>
 
-                                                <FormControl mt="20px">
+                                                <FormControl paddingRight={2} mt="20px">
                                                     <FormLabel>Last name</FormLabel>
                                                     <Input value={lasttname} onChange={(e) => setLastName(e.target.value)} type="text" placeholder='Last name' />
                                                 </FormControl>
-                                                <FormControl mt="20px">
+                                                <FormControl paddingRight={2} mt="20px">
                                                     <FormLabel>Email</FormLabel>
                                                     <Input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Email' />
                                                 </FormControl>
                                             </ModalBody>
 
                                             <ModalFooter paddingLeft="60px">
-                                                <Button position="absolute" top="500px" borderRadius="7px" width="100px" height="40px" bgColor="#2FB0DA" colorScheme="red" onClick={addDetails}>
+                                                <Button position="absolute" top="520px" borderRadius="7px" width="100px" height="40px" bgColor="#2FB0DA" colorScheme="red" onClick={addDetails}>
                                                     Save
                                                 </Button>
                                                 <Button size="md" bgColor="#2FB0DA" mt="-300%" mr="-2%" colorScheme="red" onClick={onClose}>X</Button>
