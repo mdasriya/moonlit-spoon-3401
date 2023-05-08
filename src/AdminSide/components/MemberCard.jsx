@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-//ok
+
 const MemberCard = ({email,fullname,id,planType,price}) => {
     
   
@@ -22,7 +22,6 @@ const DIV= styled.div`
     border: 1px solid indigo;
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
   .ad-mem{
     display: flex;
     justify-content:center ;

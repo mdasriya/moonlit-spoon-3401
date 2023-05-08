@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-//ok
+
 
 const UserCard = ({name,password,email,id}) => {
   return (
@@ -27,14 +27,12 @@ const DIV = styled.div`
         justify-content: center;
         
     }
-
     #name-user{
         color: blueviolet;
     }
     #pass{
         display: none;
     }
-
     .user-ad:hover+#pass{
         display: block;
         color: red;
@@ -43,5 +41,5 @@ const DIV = styled.div`
         align-items: center;
         margin: auto;
     }
-      
+    
 `
