@@ -34,7 +34,9 @@ function App() {
         top="50%"
       /> :
         <>
+
           <Navbar />
+
           <MainRoutes />
         </>
       }
