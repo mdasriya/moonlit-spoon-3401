@@ -1,10 +1,10 @@
 import React from 'react'
-import { Box, Flex, Heading, HStack, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Input, Text, Textarea } from '@chakra-ui/react'
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons'
 export const Contact = () => {
     return (
-        <Box display="flex" width="100%" id='contact-us'>
-            <Flex width="45%" height="550px" backgroundSize="900px 660px" backgroundImage="https://image1.masterfile.com/getImage/NjMyLTA2MzE3OTk0ZW4uMDAwMDAwMDA=ADAWK4/632-06317994en_Masterfile.jpg" flexDirection="column" paddingLeft="5%" >
+        <Box paddingTop="8%" display="flex" width="100%" id='contact-us' flexDirection={{xl:"row",sm:"column",md:"row",base:"column"}} marginLeft={{sm:'22%',md:"0%",base:"22%"}}>
+            <Flex width={["65%","65%","45%","45%",]} height={{xl:"660px",md:"600px",sm:"400px",base:"400px"}} opacity="2" backgroundSize={{xl:"900px 660px",md:"700px 600px",sm:"500px 400px",base:"400px 400px"}} backgroundImage="https://image1.masterfile.com/getImage/NjMyLTA2MzE3OTk0ZW4uMDAwMDAwMDA=ADAWK4/632-06317994en_Masterfile.jpg" flexDirection="column" paddingLeft="5%" >
                 <Heading marginTop="12%" color="white">CONTACT INFO</Heading>
                 <Text width="90%" color="gray" marginBottom="30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse animi sapiente quod dolores impedit doloribus vero deserunt autem repellat modi.</Text>
                 <HStack marginBottom="7px">
@@ -16,21 +16,22 @@ export const Contact = () => {
                     <Text color="lightgray">(480) 555 0103</Text>
                 </HStack>
             </Flex>
-            <Flex color="white" width="45%" paddingLeft="5%" flexDirection="column">
+            <Flex color="white" width={["65%","65%","45%","45%",]} paddingLeft={{sm:"0%",xl:"5%",md:"5%",base:"0%"}} flexDirection="column">
                 <Heading marginTop="10%" marginBottom="30px">SEND US A MESSAGE</Heading>
                 <Box >
                     <form>
                         <div >
-                            <div style={{ display: "flex", justifyContent: "flex-start" }}>
+                            <Box justifyContent="flex-start" display="flex" flexDirection={{sm:"column",md:"row",xl:"row",base:"column"}}>
                                 <div style={{ marginRight: "10px", marginBottom: "20px" }}>
                                     <label>Your Name *</label>
                                     <br />
-                                    <input
+                                    <Input
                                         required
+                                        width={["200px","200px","200px","240px",]}
                                         style={{
                                             backgroundColor: "#091315",
                                             height: "40px",
-                                            width: "240px",
+                                            
                                             border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
@@ -39,17 +40,18 @@ export const Contact = () => {
                                         }}
                                         type="text"
                                         placeholder="Enter your name"
-                                    ></input>
+                                    ></Input>
                                 </div>
                                 <div>
                                     <label>Email Address *</label>
                                     <br />
-                                    <input
+                                    <Input
                                         required
+                                        width={["200px","200px","200px","240px",]}
                                         style={{
                                             backgroundColor: "#091315",
                                             height: "40px",
-                                            width: "240px",
+                                            
                                             border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
@@ -58,19 +60,20 @@ export const Contact = () => {
                                         }}
                                         type="email"
                                         placeholder="Enter Your Email"
-                                    ></input>
+                                    ></Input>
                                 </div>
-                            </div>
-                            <div style={{ display: "flex", }}>
+                            </Box>
+                            <Box display="flex" flexDirection={{sm:"column",md:"row",xl:"row",base:"column"}} >
                                 <div style={{ marginRight: "10px", marginBottom: "20px" }}>
                                     <label>Phone Number *</label>
                                     <br />
-                                    <input
+                                    <Input
                                         required
+                                        width={["200px","200px","200px","240px",]}
                                         style={{
                                             backgroundColor: "#091315",
                                             height: "40px",
-                                            width: "240px",
+                                            
                                             border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
@@ -79,17 +82,18 @@ export const Contact = () => {
                                         }}
                                         type="number"
                                         placeholder="Enter Your Number"
-                                    ></input>
+                                    ></Input>
                                 </div>
                                 <div>
                                     <label>Subject *</label>
                                     <br />
-                                    <input
+                                    <Input
                                         required
+                                        width={["200px","200px","200px","240px",]}
                                         style={{
                                             backgroundColor: "#091315",
                                             height: "40px",
-                                            width: "240px",
+                                            
                                             border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
@@ -98,18 +102,19 @@ export const Contact = () => {
                                         }}
                                         type="text"
                                         placeholder="Type here"
-                                    ></input>
+                                    ></Input>
                                 </div>
 
-                            </div>
+                            </Box>
                             <div style={{ display: "flex" }}>
                                 <div>
-                                    <textarea
+                                    <Textarea
                                         required
+                                        width={["200px","200px","415px","495px"]}
                                         style={{
                                             backgroundColor: "#091315",
                                             height: "100px",
-                                            width: "510px",
+                                            
                                             border:"solid #2FB0DA",
                                             borderRadius: "8px",
                                             marginTop: "6px",
@@ -121,17 +126,19 @@ export const Contact = () => {
                                         name="comment"
                                         form="usrform"
                                         placeholder="Enter message here..."
-                                    ></textarea>
+                                    ></Textarea>
                                 </div>
 
                             </div>
                             <div >
-                                <input
+                                <Input
+                                variant="outline"
                                     required
+                                    width={["90px","90px","90px","90px","90px",]}
                                     style={{
                                         backgroundColor: "#2FB0DA",
                                         height: "40px",
-                                        width: "20%",
+                                        textAlign:"center",
                                         border:"solid #2FB0DA",
                                         borderRadius: "8px",
                                         marginTop: "6px",
@@ -144,7 +151,7 @@ export const Contact = () => {
                                     
                                     }}
                                     type="submit"
-                                ></input>
+                                ></Input>
                             </div>
                         </div>
                     </form>
