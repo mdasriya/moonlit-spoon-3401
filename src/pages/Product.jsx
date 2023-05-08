@@ -9,13 +9,28 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionItem,
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure,
+  Button,
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import ProductList from "./ProductList";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import Cart from "./Cart";
+
+
 const Product = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
+
   const {products} = useSelector((store)=> store.productReducer) 
   const [search, setSearch] = useSearchParams();
   const initcategory = search.getAll("category");
@@ -25,7 +40,7 @@ const Product = () => {
   const [brand, setBrand] = useState(initbrand || []);
   const [order, setOrder] = useState(initialOrder || "");
   const [length, setLength] = useState(0);
-
+const [update, setUpdate] = useState(false)
 
   const handleChange = (e) => {
     let newCategory = [...category];
@@ -60,9 +75,11 @@ const Product = () => {
     };
     order && (params.order = order);
     setSearch(params);
-  }, [category,brand, order]);
+  }, [category,brand,update, order]);
 
-
+const  updateData = () => {
+  setUpdate((prev)=> !prev)
+}
 
   return (
     <div className="outer">
@@ -343,7 +360,12 @@ const Product = () => {
           <ProductList setLength={setLength} />
         </div>
       </div>
+<Cart updateData = {updateData}/>
+
+
+
     </div>
+
   );
 };
 

@@ -36,6 +36,7 @@ const Navbar = () => {
         <Link to="/member">
           <Button cursor="pointer" borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px" color="#06181C" fontWeight="bold">BECOME A MEMBER</Button>
         </Link>
+       
       </Box>
     </Box>
   )

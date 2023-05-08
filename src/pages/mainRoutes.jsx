@@ -21,6 +21,7 @@ import SignUp from './SignUp';
 
 import Memberships from '../AdminSide/Pages/Memberships';
 import Users from "../AdminSide/Pages/Users";
+import Cart from './Cart';
 
 
 
@@ -48,6 +49,7 @@ const MainRoutes = () => {
 
         <Route path='/member' element={<Member/>}></Route>
         <Route path='/contact-us' element={<Contact/>}></Route>
+        <Route path='/cart' element={<Cart/>}></Route>
       
 
       </Routes>
