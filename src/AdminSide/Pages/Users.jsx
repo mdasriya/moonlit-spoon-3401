@@ -20,7 +20,7 @@ const Users = () => {
     <div>
         <NavAdmin/>
         <DIV>
-            {users.length>0 && users.map((item)=>{
+            {users?.length>0 && users?.map((item)=>{
                 return <UserCard key={item.id} {...item}/>
             })}
         </DIV>
