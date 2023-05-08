@@ -149,5 +149,7 @@ const AddProducts = () => {
 };
 
 export default AddProducts;
+<<<<<<<<< Temporary merge branch 1
+=========
 
 
