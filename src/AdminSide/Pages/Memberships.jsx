@@ -14,7 +14,7 @@ const Memberships = () => {
         getMemberships().then((data)=>setMember(data));
  },[])
 
- console.log(member);
+ console.log(member); 
 
 
     return (
@@ -23,7 +23,7 @@ const Memberships = () => {
          <NavAdmin/>
        <DIV>
 
-       {member.length>0 && member.map((item)=>{
+       {member?.length>0 && member?.map((item)=>{
             return  <MemberCard key={item.id} {...item}/>   
          })}
        </DIV>
