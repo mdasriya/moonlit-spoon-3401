@@ -1,7 +1,7 @@
 import * as types from "./actiontype";
 import axios from "axios";
 
-let url = `https://powerful-blue-smock.cyclic.app`;
+let url = `https://powerful-blue-smock.cyclic.app/gym_products`;
 
 
 export const getAllAdminProdReq = ()=>{
@@ -30,7 +30,7 @@ export const getAllAdminProdErr =()=>{
 export const getAllProductsAdminSide = ()=>async(dispatch)=>{
     dispatch(getAllAdminProdReq())
     try {
-        let res= await axios.get(`${url}/gym_products`);
+        let res= await axios.get(url);
         let data = res.data 
         dispatch(getAllAdminProdSucc(data));
         console.log(data);
@@ -45,7 +45,7 @@ export const getAllProductsAdminSide = ()=>async(dispatch)=>{
 
 export const addProductFromAdmin =(payload)=>async(dispatch)=>{
     try {
-        let res= await axios.post(`${url}/gym_products`,payload)
+        let res= await axios.post(url,payload)
         let data= res.data 
         console.log(data);
     } catch (error) {
@@ -57,7 +57,7 @@ export const addProductFromAdmin =(payload)=>async(dispatch)=>{
 
 export const handleDelete =async(id)=>{
     try {
-        let res= await axios.delete(`${url}/gym_products/${id}`)
+        let res= await axios.delete(`${url}/${id}`)
         console.log(res.data);
         
     } catch (error) {
@@ -71,9 +71,8 @@ export const handleDelete =async(id)=>{
 
 export const getMemberships=async()=>{
         try {
-            let res= await axios.get(`${url}/member`)
+            let res= await axios.get(`${url}/memberships`)
             let data= res.data
-            // console.log(data);
             return data 
 
         } catch (error) {
@@ -85,7 +84,6 @@ export const getUsers=async()=>{
     try {
         let res = await axios.get(`${url}/users`);
         let data= res.data
-        // console.log(data);
         return data 
         
     } catch (error) {
@@ -93,6 +91,6 @@ export const getUsers=async()=>{
     }
 }
 
+//this should be pushed 
 
-
-
+export const getadminSideInfo=()=>{}

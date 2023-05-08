@@ -1,17 +1,10 @@
-import {
-  LOGIN_ERROR,
-  LOGIN_REQUEST,
-  LOGIN_SUCCESS,
-  POST_USER_ERROR,
-  POST_USER_REQUEST,
-  POST_USER_SUCCESS,
-} from "./actionType";
+import { LOGIN_ERROR, LOGIN_REQUEST, LOGIN_SUCCESS } from "./actionType";
 
 const initialState = {
   isLoading: false,
   isError: false,
   isAuth: false,
-  token: [],
+  token: "",
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -23,22 +16,8 @@ export const reducer = (state = initialState, { type, payload }) => {
       return { ...state, isLoading: false, token: payload, isAuth: true };
     }
     case LOGIN_ERROR: {
-      return { ...state, isAuth: false, isError: true, isLoading: false };
+      return { ...state, isAuth: false, isError: true,isLoading:false };
     }
-    case POST_USER_REQUEST: {
-      return {
-        ...state,
-        isLoading: true,
-      };
-    }
-    case POST_USER_SUCCESS: {
-      return {
-        ...state,
-        isLoading: false,
-      };
-    }
-    case POST_USER_ERROR:
-      return { ...state, isError: true };
 
     default: {
       return state;

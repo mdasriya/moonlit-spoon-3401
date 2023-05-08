@@ -1,3 +1,81 @@
+// import React, { useState } from "react";
+// import styled from "styled-components";
+// import { useDispatch, useSelector } from "react-redux";
+// import { useLocation, useNavigate } from "react-router-dom";
+// import { login } from "../redux/authReducer/action";
+
+// const Login = () => {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const dispatch = useDispatch();
+//   const location = useLocation();
+//   const navigate = useNavigate();
+
+//   console.log(location);
+
+//   const isAuth = useSelector((store) => store.authReducer.isAuth);
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     const userDataObj = {
+//       email,
+//       password,
+//     };
+//     dispatch(login(userDataObj)).then(() => navigate(location.state));
+
+//     setEmail("");
+//     setPassword("");
+//   };
+
+//   return (
+//     <DIV auth={isAuth}>
+//       <h2>{isAuth ? "Login Successful!!!" : "Login To Continue"}</h2>
+//       <input
+//         type="text"
+//         placeholder="Enter Email Address"
+//         name="email"
+//         value={email}
+//         onChange={(e) => setEmail(e.target.value)}
+//       />
+//       <input
+//         type="password"
+//         name="password"
+//         placeholder="Enter Password"
+//         value={password}
+//         onChange={(e) => setPassword(e.target.value)}
+//       />
+//       <button onClick={handleSubmit}>{isAuth ? "LOGOUT" : "LOGIN"}</button>
+//     </DIV>
+//   );
+// };
+
+// export default Login;
+
+// const DIV = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   width: 300px;
+//   margin: 40px auto;
+//   gap: 10px;
+
+//   h2 {
+//     color: ${({ auth }) => (auth ? "green" : "red")};
+//   }
+//   input {
+//     height: 30px;
+//   }
+//   button {
+//     border: none;
+//     border-radius: 10px;
+//     height: 30px;
+//     color: red;
+//     font-weight: bolder;
+//     color: white;
+//     background-color: ${({ auth }) => (auth ? "green" : "red")};
+//   }
+// `;
+
+// import { Link } from "react-router-dom";
 import { Navigate, useLocation } from "react-router-dom";
 import { useContext, useRef, useState } from "react";
 import React from "react";
@@ -77,7 +155,7 @@ function Login() {
 
   return (
     <>
-      <Button ref={btnRef} zIndex={200} colorScheme="teal" onClick={onOpen}></Button>
+      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}></Button>
       <Drawer
         isOpen={isOpen}
         placement="right"
