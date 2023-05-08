@@ -36,7 +36,13 @@ function Login() {
   const btnRef = useRef();
 
   const isAuth = useSelector((store) => store.authReducer.isAuth);
+  const data = useSelector((store) => store.authReducer.data);
   const isLoading = useSelector((store) => store.authReducer.isLoading);
+
+  console.log(data);
+  // data?.forEach((el) => {
+  //   console.log(el.email == email, email);
+  // });
 
   // const Toast = () => {
   //   return toast({
@@ -59,25 +65,56 @@ function Login() {
   //   });
   // }
 
-  function handleClick(e) {
-    e.preventDefault();
-    const userDataObj = {
-      email,
-      password,
-    };
-    dispatch(login(userDataObj)).then(() => navigate(location.state));
-    // {
-    //   token ? Toast() : Toast1();
-    // }
-    setEmail("");
-    setPassword("");
+
+  
+   const check = data?.forEach((el) => {
+      // console.log(el.email,email,el.password,password)
+     if (el.email == email && el.password == password) {
+       toast({
+         title: "Login Success",
+         description: "Welcome To BeFit",
+         status: "success",
+         duration: 2000,
+         isClosable: true,
+       });
+        navigate("/");
+        
+      }
+    });
+ console.log(check)
+        
+        function handleClick(e) {
+          e.preventDefault();
+          if (email === "" && password === "") {
+            toast({
+              title: "Error",
+              description: "Please Enter Email and Password",
+              status: "success",
+              duration: 2000,
+              isClosable: true,
+              colorScheme: "red",
+            });
+          }
+          if (email !== "" && password !== "") {
+            
+            dispatch(login()).then(() => {
+              // navigate(location.state)
+            });
+      // setEmail("");
+      // setPassword("");
+    }
 
     // navigate("/");
   }
 
   return (
     <>
-      <Button ref={btnRef} zIndex={200} colorScheme="teal" onClick={onOpen}></Button>
+      <div style={{ position: "fixed", top: "50%", left: "40%" }}>
+        <h1>You need to Login First to become a member</h1>
+        <Button ref={btnRef} zIndex={200} colorScheme="teal" onClick={onOpen}>
+          Login
+        </Button>
+      </div>
       <Drawer
         isOpen={isOpen}
         placement="right"
@@ -112,7 +149,7 @@ function Login() {
                 p={8}
               >
                 <Stack spacing={4}>
-                  <FormControl id="email">
+                  <FormControl id="email" isRequired>
                     <FormLabel>Email address</FormLabel>
                     <Input
                       type="email"
@@ -139,9 +176,9 @@ function Login() {
                       justify={"space-between"}
                     >
                       <Checkbox>Remember me</Checkbox>
-                      <Link color={"blue.400"}>Forgot password?</Link>
+                      <Link color={"/signup"}>Forgot password?</Link>
                     </Stack>
-                    <Link href="#" style={{ textDecoration: "none" }}>
+                    <Link href={"/signup"} style={{ textDecoration: "none" }}>
                       <Button
                         bg={"blue.400"}
                         color={"white"}
@@ -150,9 +187,10 @@ function Login() {
                         }}
                         onClick={handleClick}
                       >
-                        {isAuth ? "Log Out" : "Sign in"}{" "}
+                        Sign In
                         {isLoading ? <Spinner size="md" /> : null}
                       </Button>
+                      <Link href="/signup">Create Account</Link>
                     </Link>
                   </Stack>
                 </Stack>

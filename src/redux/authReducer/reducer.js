@@ -11,7 +11,7 @@ const initialState = {
   isLoading: false,
   isError: false,
   isAuth: false,
-  token: [],
+  data: [],
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -20,7 +20,7 @@ export const reducer = (state = initialState, { type, payload }) => {
       return { ...state, isLoading: true };
     }
     case LOGIN_SUCCESS: {
-      return { ...state, isLoading: false, token: payload, isAuth: true };
+      return { ...state, isLoading: false, data: payload, isAuth: true };
     }
     case LOGIN_ERROR: {
       return { ...state, isAuth: false, isError: true, isLoading: false };
