@@ -5,7 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 
 const Carousel1 = () => {
   return (
-    <Box width="80%" m="auto" mt="70px">
+    <Box  width="80%" m="auto" mt="70px">
       <Carousel
         additionalTransfrom={0}
         arrows
