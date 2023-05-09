@@ -3,9 +3,11 @@ import styled from "styled-components";
 import Carousel1 from "../Components/Carousel1";
 import Carousel2 from "../Components/Carousel2";
 import Footer1 from "../Components/Footer1";
-
+import Navbar from "../Components/Navbar";
 const Blog = () => {
   return (
+    <>
+    <Navbar/>
     <DIV>
       <img
         src="https://cdn.pixabay.com/photo/2017/04/08/10/23/surfing-2212948_960_720.jpg"
@@ -41,6 +43,8 @@ const Blog = () => {
       </div>
       <Footer1 />
     </DIV>
+    </>
+    
   );
 };
 
