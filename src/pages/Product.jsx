@@ -25,6 +25,7 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Cart from "./Cart";
+import Navbar from "../Components/Navbar";
 
 
 const Product = () => {
@@ -82,6 +83,8 @@ const  updateData = () => {
 }
 
   return (
+    <>
+    <Navbar />
     <div className="outer">
       <div className="product">
         <div className="left">
@@ -364,7 +367,7 @@ const  updateData = () => {
 
 
     </div>
-
+    </>
   );
 };
 

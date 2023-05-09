@@ -10,27 +10,21 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Cart from './Cart'
 const SingleProducts = () => {
-  
   const toast = useToast()
   const [count, setCount] = useState(1)
   const [weight, setWeight] = useState(1)
     const [data, setData] = useState([])
     const {id} = useParams()
     const dispatch = useDispatch()
-const product  = useSelector((store)=> store.productReducer.products)  
-
+const product  = useSelector((store)=> store.productReducer.products)
 localStorage.setItem("id", id)
-
-
 let idnew = localStorage.getItem("id")
 useEffect(()=> {
   const data = product.find((el)=>el.id === +idnew)
   setData(data)
 },[])
-
 let finalPrice = data?.price*weight
 let saveprice = (data?.price_cut - data?.price)
-
 const handleCart = () => {
   toast({
     title: ' Added To Cart ',
@@ -42,27 +36,15 @@ const handleCart = () => {
   })
   let cartdata = {...data, price:finalPrice, quantity:count, weight:weight}
 axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
-
 }
-
-
-
-
   return (
 <div>
-
     <DIV>
    <div className='left'>
-
     <div className='first'>
     <h5 className='top-left'>-{data?.offer}%</h5>
     <img src={data?.image} alt="" />
    </div>
-  
-
-
-
-
    <div className='middle'>
   <p className='fit'>Be-Fit</p>
 <p>{data?.name}</p>
@@ -74,37 +56,31 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
             <i className="fa-solid fa-star-half-stroke"></i>
             <span>{data?.rating_count} Reviews</span>
             </div>
-
           <div className='dabba'>
-            <p>🎁 Free Nutrabay Shaker</p>
-            <p>🎁 Free Dr. Vaidya Plant Protein with prepaid cart value{">"}₹12,000</p>
-            <p>🎁 Free Nutrabay Stringer with prepaid cart value {">"} ₹8,000</p>
+            <p>:gift: Free Nutrabay Shaker</p>
+            <p>:gift: Free Dr. Vaidya Plant Protein with prepaid cart value{">"}₹12,000</p>
+            <p>:gift: Free Nutrabay Stringer with prepaid cart value {">"} ₹8,000</p>
             <p>Get The Man Company exclusive discount voucher with every purchase. T&C</p>
           </div>
-
           <div className='maingray'>
         <div className='gray'>
-          <h6>📦 Sold & Fulfilled By</h6>
+          <h6>:package: Sold & Fulfilled By</h6>
           <p>Nutrabay.com - ✓ Brand Authorized</p>
-          </div>   
-        <div className='gray'>
-          <h6>⚡ Free & Fast Delivery</h6>
-          <p>Shipped within 1 day. Free shipping on orders above ₹350.</p>
-          </div>   
-        <div className='gray'>
-          <h6>🛡️ Genuine Products</h6>
-          <p>All our products are far from expiry, and procured directly from the brand or authorized importers of the brand.</p>
-          </div>   
           </div>
-      
+        <div className='gray'>
+          <h6>:zap: Free & Fast Delivery</h6>
+          <p>Shipped within 1 day. Free shipping on orders above ₹350.</p>
+          </div>
+        <div className='gray'>
+          <h6>:shield: Genuine Products</h6>
+          <p>All our products are far from expiry, and procured directly from the brand or authorized importers of the brand.</p>
+          </div>
+          </div>
    </div>
    </div>
-
    <div className='right'>
     <div className='weightBox'>
    <span className='weight'>Weight: {weight}kg</span>
-  
-  
     </div>
 <div className='buttom' >
    <button value={"1"}  onClick={(e)=>setWeight(e.target.value)}>1kg</button>
@@ -132,10 +108,7 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
   <button className='countButton'>{count}</button>
   <button className='countButton' disabled={count>=10} onClick={()=>setCount((prev)=>prev + 1)}>+</button>
   </div>
-  
- 
 <div className="main">
-
 <button className='cartIconButton' onClick={handleCart}>Add to Cart</button>
 </div>
 </div>
@@ -146,7 +119,6 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
   )
 }
 export default SingleProducts;
-
 const DIV = styled.div`
    display :flex;
    width: 100%;
@@ -165,7 +137,6 @@ margin-top: 8%;
 }
 .middle{
     /* border: 1px solid black; */
-
 display: flex;
 flex-direction: column;
 text-align: start;
@@ -175,7 +146,6 @@ border-radius: 3px;
 .fit{
 font-size: 20px;
 }
-
 .right{
     /* border: 1px solid black; */
     width:30%;
@@ -191,7 +161,7 @@ font-size: 20px;
 .first{
     display: flex;
     /* border: 1px solid gray;  */
-    position: relative; 
+    position: relative;
 }
 .first img{
     width: 200%;
@@ -208,13 +178,12 @@ font-size: 20px;
   background-color: #515151;
 }
 .fit{
-   font-size:23px; 
+   font-size:23px;
    opacity: 0.5;
 }
 .fa-sharp, .fa-solid{
-  color  : #f49f00;
+  color  : #F49F00;
 }
-
 .mainbox{
     gap: 10px;
 }
@@ -229,9 +198,9 @@ font-size: 20px;
     padding: 12px;
 }
 .maingray{
-  border: 1px solid #ece9e9;
+  border: 1px solid #ECE9E9;
   margin-top: 10px;
-  background-color: #f5f2f2;
+  background-color: #F5F2F2;
 }
 .gray{
   padding: 12px;
@@ -241,16 +210,13 @@ font-size: 20px;
 font-weight: bold;
 }
 .weightBox{
-
   font-size: 14px;
-  
 }
 .weight{
   font-size:15px;
 /* font-weight: bold; */
 opacity: .7;
 display: flex;
-
 }
 .buttom button{
   margin-right: 15px;
@@ -260,10 +226,10 @@ display: flex;
   padding: 3px 5px;
   /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  background-color: #faf9f9;
+  background-color: #FAF9F9;
 }
 .buttom button:hover{
- background-color: #ff7b00;
+ background-color: #FF7B00;
 }
 .mrp{
   display: flex;
@@ -290,7 +256,7 @@ justify-content:space-around;
   /* border: 1px solid red; */
   /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  background-color: #f3f1f1;
+  background-color: #F3F1F1;
   border-radius: 4px;
   margin-top: 10px;
   margin-left:5px;
@@ -303,54 +269,47 @@ justify-content:space-around;
 .count .cartbutton{
   border: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: #f3f1f1;
+  background-color: #F3F1F1;
   padding:  6px 60px;
   border-radius: 4px;
-  background-color: #ff4c00;
+  background-color: #FF4C00;
   color: white;
   font-weight: bolder;
   margin-left: 15px;
 }
 .count .cartbutton:hover{
-background-color: #ff4400;
+background-color: #FF4400;
 }
-
 .add{
   display: flex;
   justify-content: space-around;
 }
 .cartIconButton {
-	border: none;
-	background: #ff4c00;
-	color: #f2f2f2;
-	padding: 6px 60px;
-	font-size: 18px;
-	border-radius: 5px;
-	position: relative;
-	box-sizing: border-box;
-	transition: all 500ms ease; 
+  border: none;
+  background: #FF4C00;
+  color: #F2F2F2;
+  padding: 6px 60px;
+  font-size: 18px;
+  border-radius: 5px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease;
   overflow:hidden
 }
-
 .cartIconButton:before {
-	font-family: FontAwesome;
-	content:"\f217";
-	position: absolute;
-	top: 11px;
-	left: -30px;
-	transition: all 200ms ease;
+  font-family: FontAwesome;
+  content:"\f217";
+  position: absolute;
+  top: 11px;
+  left: -30px;
+  transition: all 200ms ease;
 }
-
 .cartIconButton:hover:before {
-	left: 7px;
+  left: 7px;
 }
-
 .cartIconButton:hover {
   box-shadow: 1px 3px 8px #000;
 }
-
-
-
 @media only screen and (min-width: 601px) and (max-width: 800px) {
   margin-top: 15%;
   display: flex;
@@ -361,7 +320,6 @@ background-color: #ff4400;
 }
 .left{
   width: 100%;
-  
 }
 .first{
   width: 80%;
@@ -382,7 +340,6 @@ background-color: #ff4400;
   content-visibility: hidden;
 }
 }
-
 @media only screen and (min-width: 400px) and (max-width: 600px) {
   margin-top: 20%;
   display: flex;
@@ -414,7 +371,6 @@ background-color: #ff4400;
   content-visibility: hidden;
 }
 }
-
 @media only screen and (min-width: 300px) and (max-width: 399px){
   margin-top: 30%;
   display: flex;
@@ -448,9 +404,8 @@ background-color: #ff4400;
   content-visibility: hidden;
 }
 .cartIconButton {
-	padding: 5px 40px;
-	margin-top: 7px;
+  padding: 5px 40px;
+  margin-top: 7px;
 }
-              
 }
 `;

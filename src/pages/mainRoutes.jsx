@@ -23,6 +23,7 @@ import Memberships from "../AdminSide/Pages/Memberships";
 import Users from "../AdminSide/Pages/Users";
 import Cart from "./Cart";
 import PrivateRoute from "../Components/PrivateRoute";
+import Checkout from "../Components/Checkout";
 
 const MainRoutes = () => {
   return (
@@ -54,6 +55,7 @@ const MainRoutes = () => {
       ></Route>
       <Route path="/contact-us" element={<Contact />}></Route>
       <Route path="/cart" element={<Cart />}></Route>
+      <Route path="/checkout" element={<Checkout />}></Route>
     </Routes>
   );
 };
