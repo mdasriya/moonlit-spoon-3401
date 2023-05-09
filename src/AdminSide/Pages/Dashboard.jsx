@@ -20,7 +20,7 @@ const Dashboard = () => {
     <>
     <NavAdmin/>
       <Container maxW="container.xl">
-        <Heading mb={"10px"}>Dashboard</Heading>
+        <Heading alignItems={"center"} mb={"10px"}>Dashboard</Heading>
         <Grid
           templateColumns={{
             base: "repeat(1, 1fr)",
