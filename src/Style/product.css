@@ -45,7 +45,7 @@ width: 20%;
  /* border: 1px solid blue; */
  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 /* border: 1px solid red; */
-
+padding-top: 0px;
 }
 .middleright{
 width: 80%;
@@ -65,6 +65,7 @@ overflow-y: auto;
   padding: 10px 0px;
   margin-top: 10px;
 }
+
 .border{
     border: 1px solid rgb(233, 227, 227);
    width: 10%;
@@ -90,4 +91,210 @@ overflow-y: auto;
     /* border: 1px solid gray; */
     opacity: 0.7;
     margin: 10px 0px;
+}
+.fa-solid{
+    cursor: pointer;
+    }
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    .middle{
+        display: flex;
+        flex-direction: column;
+      }
+      .cartbtn .fa-solid{
+        cursor: pointer;
+       /* border: 1px solid red; */
+       margin-top: 5px;
+       padding: 10px;
+        }
+      .middleleft{
+          width: 100%;
+           /* border: 1px solid blue; */
+           box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          /* border: 1px solid red; */
+          text-align: center;
+          justify-content: center;
+          height: auto;
+          }
+     .hide{
+       content-visibility: hidden;
+          }
+          .middleright{
+              width: 100%;
+  
+              }
+            .middle .accordion{
+                  width: auto;
+              }
+              .subCategory{
+                  /* border: 1px solid rgb(218, 32, 32); */
+               opacity: 0.7;
+                  width: 100%;
+                  text-align: left;
+              }
+              .image{
+                  content-visibility: hidden;
+              }
+              
+              .brand{
+                  /* border: 1px solid rgb(83, 4, 4); */
+                  opacity: 0.7;
+                  margin: 10px 0px;
+                  width: 100%;
+                  text-align: left;
+              }
+             
+              .flauore{
+          content-visibility:hidden;
+              }
+              .FLAVOUR{
+                  content-visibility:hidden; 
+              }
+              .preference{
+               content-visibility: hidden;
+               border: none;
+              }
+              .PREFERENCE, .CATEGORY, .BRAND, .FLAVOUR{ 
+                  padding: 2px 0px;
+                  margin-top: 0px;
+                }
+                .PREFERENCE{
+                  content-visibility: hidden;
+                  padding-top: 0%;
+              }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+    .middle{
+      display: flex;
+      flex-direction: column;
+    }
+    .cartbtn .fa-solid{
+        cursor: pointer;
+       /* border: 1px solid red; */
+       margin-top: 5px;
+       padding-top: 26px;
+        }
+    .middleleft{
+        width: 100%;
+         /* border: 1px solid blue; */
+         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        /* border: 1px solid red; */
+        text-align: center;
+        justify-content: center;
+        height: auto;
+        }
+        .middleright{
+            width: 100%;
+
+            }
+          .middle .accordion{
+                width: auto;
+
+            }
+            .subCategory{
+                /* border: 1px solid rgb(218, 32, 32); */
+             opacity: 0.7;
+                width: 100%;
+                text-align: left;
+            }
+            .image{
+                content-visibility: hidden;
+            }
+            
+            .brand{
+                /* border: 1px solid rgb(83, 4, 4); */
+                opacity: 0.7;
+                margin: 10px 0px;
+                width: 100%;
+                text-align: left;
+            }
+           
+            .flauore{
+        content-visibility:hidden;
+            }
+            .FLAVOUR{
+                content-visibility:hidden; 
+            }
+            .preference{
+             content-visibility: hidden;
+             border: none;
+            }
+            .PREFERENCE, .CATEGORY, .BRAND, .FLAVOUR{ 
+                padding: 2px 0px;
+                margin-top: 0px;
+              }
+              .PREFERENCE{
+                content-visibility: hidden;
+                padding-top: 0%;
+            }
+           
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px){
+    .middle{
+        display: flex;
+        flex-direction: column;
+      }
+      .cartbtn .fa-solid{
+        cursor: pointer;
+       /* border: 1px solid red; */
+   justify-content: center;
+       padding-top: 10px;
+        }
+      .middleleft{
+          width: 100%;
+           /* border: 1px solid blue; */
+           box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          /* border: 1px solid red; */
+          text-align: center;
+          justify-content: center;
+          height: auto;
+          }
+          .middleright{
+              width: 100%;
+  
+              }
+            .middle .accordion{
+                  width: auto;
+  
+              }
+              .subCategory{
+                  /* border: 1px solid rgb(218, 32, 32); */
+               opacity: 0.7;
+                  width: 100%;
+                  text-align: left;
+              }
+              .image{
+                  content-visibility: hidden;
+              }
+              
+              .brand{
+                  /* border: 1px solid rgb(83, 4, 4); */
+                  opacity: 0.7;
+                  margin: 10px 0px;
+                  width: 100%;
+                  text-align: left;
+              }
+             
+              .flauore{
+          content-visibility:hidden;
+              }
+              .FLAVOUR{
+                  content-visibility:hidden; 
+              }
+              .preference{
+               content-visibility: hidden;
+               border: none;
+              }
+              .PREFERENCE, .CATEGORY, .BRAND, .FLAVOUR{ 
+                  padding: 2px 0px;
+                  margin-top: 0px;
+                }
+                .PREFERENCE{
+                  content-visibility: hidden;
+                  padding-top: 0%;
+              }
+             
+              
 }

@@ -6,11 +6,8 @@ import { useSelector } from 'react-redux';
 import {  SkeletonCircle,Box, SkeletonText } from '@chakra-ui/react'
 
 const ProductCart = ({ offer,image,name,rating_count,price_cut,price,id }) => {
-  const {isLoading} = useSelector((store)=> store.productReducer) 
+  // const {isLoading} = useSelector((store)=> store.productReducer) 
  
-
-
-  
     return (
      
     <Link to={`/products/${id}`}>
@@ -55,6 +52,7 @@ display: block;
   padding-left: 5px;
     padding-bottom: 5px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+ 
 :hover{
 
   transition: all 0.2s ease-out;
@@ -116,4 +114,21 @@ font-size: medium;
   color: #fff;
   padding: 0px 10px;
 }
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  
+  .first img{
+    width: 100%;
+    height: 150px;
+}             
+}
+@media only screen and (min-width: 300px) and (max-width: 399px){
+  .first img{
+    width: 60%;
+    height: 50%;
+    margin-left: 50px;
+}
+}
+
+
 `;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-
+import "../Style/product.css"
 import {
   Drawer,
   
@@ -14,13 +14,15 @@ import {
   Thead,
   Table,
   Tr,
+  Box,
   Th,
   TableContainer,
 } from '@chakra-ui/react'
 import styled from "styled-components"
 
 import axios from "axios"
-import { useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
+
 
 const getData =  async () => {
   const res =  await axios.get("https://powerful-blue-smock.cyclic.app/cart")
@@ -33,7 +35,6 @@ const getData =  async () => {
  export default function Cart() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
-const {location} = useLocation()
   const [data, setData] = useState([])
 const [update, setUpdate] = useState(false)
 
@@ -47,6 +48,7 @@ const func = () => {
     getData()
       .then((res) => {
         setData(res)
+
       })
       .catch((err) => {
         console.log(err);
@@ -96,13 +98,16 @@ const func = () => {
     }
   
   }
-
-console.log(location);
+  const totalPrice = data.reduce((acc, item) => acc + item.price * item.quantity, 0);
   return (
     <div>
-      <Button  zIndex={"200"} top={3} right={0} position={"fixed"}  ref={btnRef} colorScheme='teal' onClick={onOpen}>
-        Cart
-      </Button>
+      <div className="cartbtn">
+      <Box marginRight={"5px"} backgroundColor={"none"} zIndex={"200"} top={5} right={0} position={"fixed"}  ref={btnRef} border={"none"} onClick={onOpen}>
+  
+      <i className="fa-solid fa-cart-shopping"  style={{"color":"white","marginTop":"15px", "marginRight":"10px"}}></i>
+      </Box>
+
+      </div>
       <Drawer
         isOpen={isOpen}
         placement='right'
@@ -152,8 +157,31 @@ console.log(location);
                 </div>
                       </div>
               })
-            }  
+            }
+            <div className="lastBox">
+<div className="empty">
 
+</div>
+  
+<div className="full">
+<div className="total">
+  <h1>Subtotal:</h1>
+  <p>₹{totalPrice}</p>
+</div>
+<div className="taxes">
+<Text fontSize='xs'>Taxes and shipping calculated at checkout</Text>
+</div>
+
+
+<div className="check">
+<Link to="#">
+  <button className="checkout">Checkout   →</button>
+</Link>
+</div>
+
+</div>
+
+            </div>
  </DIV>
 </TableContainer>
           </DrawerBody>
@@ -161,17 +189,22 @@ console.log(location);
         
         </DrawerContent>
       </Drawer>
-      <div className="checkout">
-        <div className="first"></div>
-        <div className="second"></div>
-      </div>
+      
     </div>
   )
 };
 
 const DIV = styled.div`
+
+@media only screen and (min-width: 300px) and (max-width: 399px){
+  .cartbtn{
+    content-visibility:hidden;
+  }
+}
+
+
 .contentdiv{
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   align-items: center;
  margin-bottom: 10px;
 }
@@ -187,12 +220,12 @@ img{
   flex-direction: column;
 }
 div .b{
- border: 1px solid black;
+ /* border: 1px solid black; */
  white-space: nowrap; 
  width: 270px; 
  overflow: hidden;
  text-overflow: ellipsis; 
- border: 1px solid #000000;
+ /* border: 1px solid #000000; */
 }
 
 .quantity{
@@ -201,7 +234,7 @@ div .b{
   justify-content: space-between;
   height: 30px;
   margin-top: 20px;
-
+border-radius: 8px;
   
 }
 .quantity button{
@@ -219,5 +252,52 @@ border-radius: 4px;
   border-radius: 4px;
   margin-top: 20px;
 }
+.total{
+width: 100%;
+height: auto;
+font-weight: 100px;
+display: flex;
+justify-content: right;
+margin-bottom: 10px;
+}
+.total h1{
+margin-right: 15px;
+font-weight: 400;
+}
+.lastBox{
+  width: 100%;
+display: flex;
+}
+.empty{
+  width: 40%;
+  height: 200px;
+}
+.full{
+  width: 60%;
+  height: 200px;
+  display: flex;
+ flex-direction: column;
+ text-align:end;
+}
+.lastBox button{
+  border: 1px solid black;
+  padding: 7px 30px;
+  font-weight: 400; 
+  background-color: black;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.taxes{
+  opacity: .5;
+}
+.check{
+  justify-content: center;
+}
+.check .checkout{
+ padding: 7px 65px;
+}
+
 
 `
