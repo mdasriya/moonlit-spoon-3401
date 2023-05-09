@@ -3,13 +3,14 @@ import React from 'react'
 import { Box, Button,  Heading,  Image,  Text } from '@chakra-ui/react'
 import AboutUs from './AboutUs'
 import Coaches from './Coaches'
-
+import Navbar from '../Components/Navbar'
 import Contact from './Contact'
 import Footer1 from '../Components/Footer1'
 const Home = () => {
     
     return (
         <>
+        <Navbar/>
         <Box backgroundColor="#091315">
             <Box paddingTop={{sm:"10px",base:"10px"}} mt={["90px","95px","90px","80px","80px",]} display="flex" justifyContent="space-around" alignItems="center" backgroundColor="black" flexDirection={{xl:"row",sm:"column",md:"row",base:"column"}} width="100%">
                 <Box width={["60%","50%","60%","50%","50%",]} display="flex" flexDirection="column" alignItems="start" marginLeft="5%">

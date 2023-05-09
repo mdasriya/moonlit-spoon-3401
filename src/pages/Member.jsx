@@ -33,6 +33,7 @@ import { useDisclosure, } from '@chakra-ui/react';
 import { useDispatch, useSelector } from "react-redux";
 import { store } from "../store";
 import { postMembership } from "../redux/memberReducer/action";
+import Navbar from "../Components/Navbar";
 
 function PriceWrapper({ children }) {
     return (
@@ -115,6 +116,7 @@ export default function Member() {
 
     return (
         <>
+        <Navbar/>
             <hr style={{
                 marginTop: "0px",
                 border: "0",
