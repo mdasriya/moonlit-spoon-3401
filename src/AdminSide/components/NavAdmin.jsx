@@ -40,13 +40,13 @@ export default NavAdmin
 
 
 const DIV = styled.div`
-    border : 1px solid black;
+    /* border : 1px solid black; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 60px ;
     background-color: azure;
-    margin-top: 105px;
+    /* margin-top: 105px; */
     .names {
       :hover {
         color : orange
