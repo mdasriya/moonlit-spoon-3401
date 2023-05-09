@@ -3,44 +3,49 @@ import styled from "styled-components";
 import Carousel1 from "../Components/Carousel1";
 import Carousel2 from "../Components/Carousel2";
 import Footer1 from "../Components/Footer1";
+import Navbar from "../Components/Navbar";
 
 const Blog = () => {
   return (
-    <DIV>
-      <img
-        src="https://cdn.pixabay.com/photo/2017/04/08/10/23/surfing-2212948_960_720.jpg"
-        alt="surfing"
-      />
-      <div className="banner">
-        <h4>Trending</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-          laborum.
-        </p>
-      </div>
-      <div className="meditation">
-        <img src="https://wallpapercave.com/wp/wp7246274.jpg" alt="" />
-        <div>
-          <h2>Meditation</h2>
+    <>
+      <Navbar/>
+      <DIV>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/04/08/10/23/surfing-2212948_960_720.jpg"
+          alt="surfing"
+        />
+        <div className="banner">
+          <h4>Trending</h4>
           <p>
-            Meditation is a structured, intractive process where an impartial
-            third party assists disputing parties in resolving conflict through
-            the use of specialized communication and negotiation techniques...
-            <span> Read more </span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+            laborum.
           </p>
-          <hr />
-          <p>Mathew Glock</p>
-          <p>Posted on 28 February</p>
         </div>
-      </div>
-      <div>
-        <Carousel1 />
-        <hr className="carousel" />
-        <Carousel2 />
-        <hr className="carousel" />
-      </div>
-      <Footer1 />
-    </DIV>
+        <div className="meditation">
+          <img src="https://wallpapercave.com/wp/wp7246274.jpg" alt="" />
+          <div>
+            <h2>Meditation</h2>
+            <p>
+              Meditation is a structured, intractive process where an impartial
+              third party assists disputing parties in resolving conflict
+              through the use of specialized communication and negotiation
+              techniques...
+              <span> Read more </span>
+            </p>
+            <hr />
+            <p>Mathew Glock</p>
+            <p>Posted on 28 February</p>
+          </div>
+        </div>
+        <div>
+          <Carousel1 />
+          <hr className="carousel" />
+          <Carousel2 />
+          <hr className="carousel" />
+        </div>
+        <Footer1 />
+      </DIV>
+    </>
   );
 };
 
@@ -49,7 +54,7 @@ export default Blog;
 const DIV = styled.div`
   background-color: #091315;
   color: #e1f4f6;
-  margin-top:4.7%;
+  margin-top: 4.7%;
   img {
     width: 100vw;
     height: 80vh;

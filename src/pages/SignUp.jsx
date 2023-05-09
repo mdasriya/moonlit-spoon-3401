@@ -19,12 +19,13 @@ import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { signUp } from "../redux/authReducer/action";
+import Navbar from "../Components/Navbar";
+import { Navigate } from "react-router-dom" 
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -33,11 +34,11 @@ export default function SignUp() {
   function handleClick(e) {
     e.preventDefault();
     const userDataObj = {
-      name: `${firstName+" "+lastName}`,
+      name: `${firstName + " " + lastName}`,
       email,
       password,
     };
-    dispatch(signUp(userDataObj)).then(() => navigate(""));
+    dispatch(signUp(userDataObj)).then(() => navigate("/login"));
     setEmail("");
     setPassword("");
 
@@ -45,115 +46,120 @@ export default function SignUp() {
   }
 
   return (
-    <Flex
-      minH={"80vh"}
-      align={"center"}
-      justify={"center"}
-      bg={useColorModeValue("gray.50", "gray.800")}
-    >
-      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
-        <Stack align={"center"}>
-          <Heading fontSize={"4xl"} textAlign={"center"}>
-            Sign up
-          </Heading>
-          <Text fontSize={"lg"} color={"gray.600"}>
-            to enjoy all of our cool features ✌️
-          </Text>
-        </Stack>
-        <Box
-          rounded={"lg"}
-          bg={useColorModeValue("white", "gray.700")}
-          boxShadow={"lg"}
-          p={8}
-        >
-          <Stack spacing={4}>
-            <HStack>
-              <Box>
-                <FormControl id="firstName" isRequired>
-                  <FormLabel>First Name</FormLabel>
-                  <Input
-                    type="text"
-                    placeholder="Enter First Name"
-                    name="first"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    required
-                  />
-                </FormControl>
-              </Box>
-              <Box>
-                <FormControl id="lastName">
-                  <FormLabel>Last Name</FormLabel>
-                  <Input
-                    type="text"
-                    placeholder="Enter Last Name"
-                    name="last"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    required
-                  />
-                </FormControl>
-              </Box>
-            </HStack>
-            <FormControl id="email" isRequired>
-              <FormLabel>Email address</FormLabel>
-              <Input
-                type="email"
-                placeholder="Enter Email Address"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </FormControl>
-            <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
-              <InputGroup>
+    <>
+      <Navbar />
+      <Flex
+        minH={"80vh"}
+        align={"center"}
+        justify={"center"}
+        bg={useColorModeValue("gray.50", "gray.800")}
+      >
+        <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
+          <Stack align={"center"}>
+            <Heading fontSize={"4xl"} textAlign={"center"}>
+              Sign up
+            </Heading>
+            <Text fontSize={"lg"} color={"gray.600"}>
+              to enjoy all of our cool features ✌️
+            </Text>
+          </Stack>
+          <Box
+            rounded={"lg"}
+            bg={useColorModeValue("white", "gray.700")}
+            boxShadow={"lg"}
+            p={8}
+          >
+            <Stack spacing={4}>
+              <HStack>
+                <Box>
+                  <FormControl id="firstName" isRequired>
+                    <FormLabel>First Name</FormLabel>
+                    <Input
+                      type="text"
+                      placeholder="Enter First Name"
+                      name="first"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
+                    />
+                  </FormControl>
+                </Box>
+                <Box>
+                  <FormControl id="lastName">
+                    <FormLabel>Last Name</FormLabel>
+                    <Input
+                      type="text"
+                      placeholder="Enter Last Name"
+                      name="last"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      required
+                    />
+                  </FormControl>
+                </Box>
+              </HStack>
+              <FormControl id="email" isRequired>
+                <FormLabel>Email address</FormLabel>
                 <Input
-                  type={showPassword ? "text" : "password"}
-                  name="password"
-                  placeholder="Enter Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  type="email"
+                  placeholder="Enter Email Address"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <InputRightElement h={"full"}>
-                  <Button
-                    variant={"ghost"}
-                    onClick={() =>
-                      setShowPassword((showPassword) => !showPassword)
-                    }
-                  >
-                    {showPassword ? <ViewIcon /> : <ViewOffIcon />}
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
-            </FormControl>
-            <Stack spacing={10} pt={2}>
-              <Button
-                loadingText="Submitting"
-                size="lg"
-                bg={"blue.400"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-                onClick={handleClick}
-              >
-                Sign up
-              </Button>
-            </Stack>
-            <Stack pt={6}>
-              <Text align={"center"}>
-                Already a user?{" "}
-                <Button color="royalblue" onClick={handleClick}>
-                  Login
+              </FormControl>
+              <FormControl id="password" isRequired>
+                <FormLabel>Password</FormLabel>
+                <InputGroup>
+                  <Input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="Enter Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                  <InputRightElement h={"full"}>
+                    <Button
+                      variant={"ghost"}
+                      onClick={() =>
+                        setShowPassword((showPassword) => !showPassword)
+                      }
+                    >
+                      {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                    </Button>
+                  </InputRightElement>
+                </InputGroup>
+              </FormControl>
+              <Stack spacing={10} pt={2}>
+                <Button
+                  loadingText="Submitting"
+                  size="lg"
+                  bg={"blue.400"}
+                  color={"white"}
+                  _hover={{
+                    bg: "blue.500",
+                  }}
+                  onClick={handleClick}
+                >
+                  Sign up
                 </Button>
-              </Text>
+              </Stack>
+              <Stack pt={6}>
+                <Text align={"center"}>
+                  Already a user?{" "}
+                  
+                  <a href="/login">
+                  <Button color="royalblue" >Login</Button>
+                  </a>
+                  
+                </Text>
+              </Stack>
             </Stack>
-          </Stack>
-        </Box>
-      </Stack>
-    </Flex>
+          </Box>
+        </Stack>
+      </Flex>
+    </>
   );
 }

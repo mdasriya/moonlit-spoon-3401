@@ -18,7 +18,7 @@ const AdminProdCard = ({...item}) => {
     return (
     <DIV key={item.id}>
         <img id='imgg' src={image} alt='image_prod'/>
-        <h4 id='name' className='det'>{name}</h4>
+        <h4 id='name' className='det' >{name}</h4>
         <h4 className='det'>Price : ₹{price}/-</h4>
         <h4 className='det'>Price Cut :  ₹{price_cut}/-</h4>
         <h4 className='det'>Offer : -{offer}%</h4>
@@ -43,6 +43,8 @@ const DIV = styled.div`
     height: 460px;
     margin: auto;
     gap: 5px;
+    padding: 10px;
+    border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     :hover{
         border: 1px solid black;

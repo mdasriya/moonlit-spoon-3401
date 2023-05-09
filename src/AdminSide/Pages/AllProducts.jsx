@@ -19,8 +19,6 @@ const AllProducts = () => {
        dispatch(getAllProductsAdminSide());
     },[])
 
-    
-
     return (
     
     <div>
