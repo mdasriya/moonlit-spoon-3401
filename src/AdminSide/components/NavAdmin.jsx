@@ -46,7 +46,7 @@ const DIV = styled.div`
     align-items: center;
     height: 60px ;
     background-color: azure;
-    
+    margin-top: 105px;
     .names {
       :hover {
         color : orange

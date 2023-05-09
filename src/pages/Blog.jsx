@@ -8,19 +8,30 @@ import Navbar from "../Components/Navbar";
 const Blog = () => {
   return (
     <>
-      <Navbar/>
-      <DIV>
-        <img
-          src="https://cdn.pixabay.com/photo/2017/04/08/10/23/surfing-2212948_960_720.jpg"
-          alt="surfing"
-        />
-        <div className="banner">
-          <h4>Trending</h4>
+    <Navbar/>
+    <DIV>
+      <img
+        src="https://cdn.pixabay.com/photo/2017/04/08/10/23/surfing-2212948_960_720.jpg"
+        alt="surfing"
+      />
+      <div className="banner">
+        <h4>Trending</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+          laborum.
+        </p>
+      </div>
+      <div className="meditation">
+        <img src="https://wallpapercave.com/wp/wp7246274.jpg" alt="" />
+        <div>
+          <h2>Meditation</h2>
+
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
             laborum.
           </p>
         </div>
+
         <div className="meditation">
           <img src="https://wallpapercave.com/wp/wp7246274.jpg" alt="" />
           <div>
@@ -46,6 +57,7 @@ const Blog = () => {
         <Footer1 />
       </DIV>
     </>
+
   );
 };
 

@@ -1,80 +1,40 @@
 import React from "react";
 
-import { Box, Button, Heading, Image, Text } from "@chakra-ui/react";
-import AboutUs from "./AboutUs";
-import Coaches from "./Coaches";
 
-import Contact from "./Contact";
-import Footer1 from "../Components/Footer1";
-import Navbar from "../Components/Navbar";
+import { Box, Button,  Heading,  Image,  Text } from '@chakra-ui/react'
+import AboutUs from './AboutUs'
+import Coaches from './Coaches'
+import Navbar from '../Components/Navbar'
+import Contact from './Contact'
+import Footer1 from '../Components/Footer1'
 const Home = () => {
-  return (
-    <>
-      <Navbar />
-      <Box backgroundColor="#091315">
-        <Box
-          paddingTop={{ sm: "10px", base: "10px" }}
-          mt={["90px", "95px", "90px", "80px", "80px"]}
-          display="flex"
-          justifyContent="space-around"
-          alignItems="center"
-          backgroundColor="black"
-          flexDirection={{ xl: "row", sm: "column", md: "row", base: "column" }}
-          width="100%"
-        >
-          <Box
-            width={["60%", "50%", "60%", "50%", "50%"]}
-            display="flex"
-            flexDirection="column"
-            alignItems="start"
-            marginLeft="5%"
-          >
-            <Heading color="white">CREATE THE PATH TO YOURE EMPOWER</Heading>
-            <Text marginTop="10px" color="white">
-              GET MORE WITH LOW-COST TRAINING PROGRAMS AND ADVACED FEATURES
-            </Text>
-            <Button
-              marginTop="10px"
-              cursor="pointer"
-              width={["90px", "90px", "90px", "90px", "90px"]}
-              borderRadius="2px"
-              backgroundColor="#2FD0DA"
-              border="none"
-              padding="5px"
-              color="#06181C"
-              fontWeight="bold"
-              position="static"
-            >
-              JOIN NOW
-            </Button>
-            <br />
-            <Box
-              alignItems="center"
-              width={["55%", "55%", "55%", "35%", "45%"]}
-              display="flex"
-              justifyContent={{
-                sm: "space-between",
-                md: "space-between",
-                base: "space-between",
-                xl: "space-between",
-              }}
-            >
-              <Image
-                width="60px"
-                src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F67979fc2-9bc6-4ef1-a91a-9f8129c57645_1500x1500.jpeg"
-              ></Image>
-              <Image
-                width="60px"
-                src="https://thumbs.dreamstime.com/b/algeria-map-collection-253453223.jpg"
-              ></Image>
-              <Image
-                width="60px"
-                src="https://logos-world.net/wp-content/uploads/2020/04/Puma-Symbol.jpg"
-              ></Image>
-              <Image
-                width="60px"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcopZiM1Ib6yZrqDX1yh0pwJ2NVklCWWpuDg&usqp=CAU"
-              ></Image>
+    
+    return (
+        <>
+        <Navbar/>
+        <Box backgroundColor="#091315">
+            <Box paddingTop={{sm:"10px",base:"10px"}} mt={["90px","95px","90px","80px","80px",]} display="flex" justifyContent="space-around" alignItems="center" backgroundColor="black" flexDirection={{xl:"row",sm:"column",md:"row",base:"column"}} width="100%">
+                <Box width={["60%","50%","60%","50%","50%",]} display="flex" flexDirection="column" alignItems="start" marginLeft="5%">
+                    <Heading color="white">
+                        CREATE THE PATH TO YOURE EMPOWER
+                    </Heading>
+                    <Text marginTop="10px" color="white">
+                        GET MORE WITH LOW-COST TRAINING PROGRAMS AND ADVACED FEATURES
+                    </Text>
+                    <Button marginTop="10px" cursor="pointer" width={["90px","90px","90px","90px","90px",]} borderRadius="2px" backgroundColor="#2FD0DA" border="none" padding="5px" color="#06181C" fontWeight="bold" position="static">JOIN NOW</Button>
+                    <br />
+                    <Box alignItems="center" width={["55%","55%","55%","35%","45%"]}  display="flex" justifyContent={{sm:'space-between',md:"space-between",base:"space-between",xl:"space-between"}}>
+                    <Image width="60px" src='https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F67979fc2-9bc6-4ef1-a91a-9f8129c57645_1500x1500.jpeg'></Image>
+                    <Image width="60px" src='https://thumbs.dreamstime.com/b/algeria-map-collection-253453223.jpg'></Image>
+                    <Image width="60px" src='https://logos-world.net/wp-content/uploads/2020/04/Puma-Symbol.jpg'></Image>
+                    <Image  width="60px" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcopZiM1Ib6yZrqDX1yh0pwJ2NVklCWWpuDg&usqp=CAU'></Image>
+                    </Box>
+                    
+                    
+                </Box>
+                <Image width={["80%","50%","60%","50%","50%",]} src='https://cdn.shopify.com/s/files/1/0504/5357/7879/articles/cef7245a383825edafdd44c054496756.jpg?v=1667233332' ></Image>
+
+
             </Box>
           </Box>
           <Image

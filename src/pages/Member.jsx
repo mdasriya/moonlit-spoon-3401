@@ -103,10 +103,12 @@ export default function Member() {
       window.alert("Something went wrong");
     }
 
+
     setFirstName("");
     setLastName("");
     setEmail("");
   };
+
 
   return (
       <>
