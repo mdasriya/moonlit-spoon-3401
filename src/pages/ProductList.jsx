@@ -106,4 +106,23 @@ const DIV = styled.div`
   grid-template-columns: repeat(4,1fr);
   gap: 10px;
 
+  @media only screen and (min-width: 601px) and (max-width: 800px) {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+          
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px){
+  width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+}
+
 `;

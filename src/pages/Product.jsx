@@ -31,7 +31,7 @@ const Product = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
 
-  const {products} = useSelector((store)=> store.productReducer) 
+  // const {products} = useSelector((store)=> store.productReducer) 
   const [search, setSearch] = useSearchParams();
   const initcategory = search.getAll("category");
   const initbrand = search.getAll("brand");
@@ -109,8 +109,8 @@ const  updateData = () => {
 
       <div className="middle">
         <div className="middleleft">
-          <div>
-            <Text fontSize="xl" as={"b"}>
+          <div className="hide">
+            <Text className="m" fontSize="xl" as={"b"}>
               Protein Powders
             </Text>
             <img
@@ -120,11 +120,10 @@ const  updateData = () => {
             />
           </div>
           <div className="PREFERENCE">
-            <Text fontSize="xl" as={"b"}>
+            <Text className="m" fontSize="xl" as={"b"}>
               PREFERENCE
             </Text>
           </div>
-          {/* <div className="border"></div> */}
 
           <div className="preference">
             <div>
@@ -141,7 +140,7 @@ const  updateData = () => {
             </Text>
           </div>
 
-          <Accordion allowMultiple width={"250px"}>
+          <Accordion className="accordion" allowMultiple width={"250px"}>
             <AccordionItem>
               {({ isExpanded }) => (
                 <>
@@ -217,7 +216,7 @@ const  updateData = () => {
             </Text>
           </div>
 
-          <Accordion allowMultiple width={"250px"}>
+          <Accordion className="accordion" allowMultiple width={"250px"}>
             <AccordionItem>
               {({ isExpanded }) => (
                 <>
@@ -308,7 +307,7 @@ const  updateData = () => {
               FLAVOUR
             </Text>
           </div>
-          <Accordion allowMultiple width={"250px"}>
+          <Accordion className="flauore" allowMultiple width={"250px"}>
             <AccordionItem>
               {({ isExpanded }) => (
                 <>

@@ -58,7 +58,7 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
     <h5 className='top-left'>-{data?.offer}%</h5>
     <img src={data?.image} alt="" />
    </div>
-    </div>
+  
 
 
 
@@ -96,29 +96,9 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
           <p>All our products are far from expiry, and procured directly from the brand or authorized importers of the brand.</p>
           </div>   
           </div>
-
-          {/* <div className='maingray'>
-        <div className='gray'>
-          <h6>🎗️ Brand</h6>
-          <p>Nutrabay Retail Pvt. Ltd.</p>
-          <p>B-117, Pocket B, Okhla I, Okhla Industrial Area, New Delhi, 110020</p>
-          <p>India</p>
-          <p>FSSAI Lic. No. 13322999000048</p>
-          <p>friends@be-fit.com; 011 61196333</p>
-          </div>   
-        <div className='gray'>
-          <h6>🏢 Manufacturer</h6>
-          <p>Abyss Pharma Pvt Ltd. B-121 phase-I, Mayapuri, Industrial Area, 
-</p>
-          <p>New Delhi - 110064</p>
-          <p>Country of Origin: India</p>
-          
-          </div>   
-         
-          </div> */}
-          
+      
    </div>
-
+   </div>
 
    <div className='right'>
     <div className='weightBox'>
@@ -155,15 +135,13 @@ axios.post("https://powerful-blue-smock.cyclic.app/cart",cartdata)
   
  
 <div className="main">
-<button className='cartIconButton' onClick={handleCart}>Add to Cart</button>
-<Link to={"/cart"}>
 
-</Link>
+<button className='cartIconButton' onClick={handleCart}>Add to Cart</button>
 </div>
 </div>
    </div>
     </DIV>
-    <Cart/>
+  <Cart />
 </div>
   )
 }
@@ -179,15 +157,15 @@ const DIV = styled.div`
    justify-content: space-between;
 margin-top: 8%;
 .left{
-    /* border: 1px solid black; */
-    width: 26%;
+    /* border: 1px solid blue; */
+    width: 70%;
     height: 60%;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     border-radius: 3px;
 }
 .middle{
     /* border: 1px solid black; */
-width: 40%;
+
 display: flex;
 flex-direction: column;
 text-align: start;
@@ -277,7 +255,7 @@ display: flex;
 .buttom button{
   margin-right: 15px;
   border-radius: 5px;
-  /* border: 1px solid orange; */
+  border: 1px solid orange;
   margin-top: 15px;
   padding: 3px 5px;
   /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
@@ -369,5 +347,110 @@ background-color: #ff4400;
 
 .cartIconButton:hover {
   box-shadow: 1px 3px 8px #000;
+}
+
+
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  .first img{
+    width: 100%;
+    height:  300px
+}
+.left{
+  width: 100%;
+  
+}
+.first{
+  width: 80%;
+}
+.right{
+    border: 1px solid red;
+    width:100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    height: 60%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.maingray{
+  content-visibility: hidden;
+}
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  .first img{
+    width: auto;
+    height:  150px;
+}
+.left{
+  /* flex-direction: column; */
+  width: 100%;
+}
+.first{
+  width: 60%;
+}
+.right{
+    border: 1px solid red;
+    width:100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    height: 60%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.maingray{
+  content-visibility: hidden;
+}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px){
+  margin-top: 30%;
+  display: flex;
+  flex-direction: column;
+  .first img{
+    width: auto;
+    height:  auto;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.first{
+  width: 100%;
+  justify-content: center;
+}
+.right{
+    border: 1px solid red;
+    width:100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    height: 60%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.maingray{
+  content-visibility: hidden;
+}
+.cartIconButton {
+	padding: 5px 40px;
+	margin-top: 7px;
+}
+              
 }
 `;
