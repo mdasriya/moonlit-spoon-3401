@@ -6,6 +6,7 @@ import MainRoutes from "./pages/mainRoutes";
 import { useEffect, useState } from "react"
 import Navbar from './Components/Navbar';
 import { Spinner } from '@chakra-ui/spinner';
+import Footer1 from './Components/Footer1';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <>
           {/* <Navbar /> */}
           <MainRoutes />
+          <Footer1/>
         </>
       }
 

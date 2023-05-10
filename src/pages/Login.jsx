@@ -41,33 +41,8 @@ function Login() {
   const isLoading = useSelector((store) => store.authReducer.isLoading);
 
   console.log(data);
-  // data?.forEach((el) => {
-  //   console.log(el.email == email, email);
-  // });
-
-  // const Toast = () => {
-  //   return toast({
-  //     title: "Account created.",
-  //     description: "We've created your account for you.",
-  //     status: "success",
-  //     duration: 5000,
-  //     position: "top",
-  //     isClosable: true,
-  //   });
-  // };
-  // function Toast1() {
-  //   return toast({
-  //     title: "Wrong.",
-  //     description: "We've created your account for you.",
-  //     status: "success",
-  //     duration: 3000,
-  //     position: "top",
-  //     isClosable: true,
-  //   });
-  // }
 
   const check = data?.forEach((el) => {
-    // console.log(el.email,email,el.password,password)
     if (el.email == email && el.password == password) {
       toast({
         title: "Login Success",
@@ -80,13 +55,7 @@ function Login() {
     }
     if (email=="admin@befit.com" && password=="befit") {
       navigate("/allproducts");
-      // return toast({
-      //   title: "Login Success",
-      //   description: "Welcome To BeFit",
-      //   status: "success",
-      //   duration: 2000,
-      //   isClosable: true,
-      // });
+
     }
 
   });
@@ -106,6 +75,8 @@ function Login() {
     }
     if (email !== "" && password !== "") {
       dispatch(login())
+      // setEmail("")
+      // setPassword("");
     }
   }
 
@@ -118,7 +89,6 @@ function Login() {
         justify={"center"}
         bg={useColorModeValue("gray.50", "gray.800")}
       >
-        {/* <h2>{isAuth ? "Login Successful!!!" : "Login To Continue"}</h2> */}
 
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
@@ -185,6 +155,7 @@ function Login() {
           </Box>
         </Stack>
       </Flex>
+      
     </>
   );
 }
