@@ -160,6 +160,7 @@ export default function SignUp() {
           </Box>
         </Stack>
       </Flex>
+      
     </>
   );
 }

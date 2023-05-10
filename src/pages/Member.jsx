@@ -103,16 +103,14 @@ export default function Member() {
       window.alert("Something went wrong");
     }
 
-
     setFirstName("");
     setLastName("");
     setEmail("");
   };
 
-
   return (
-      <>
-          <Navbar/>
+    <>
+      <Navbar />
       <hr
         style={{
           marginTop: "0px",
@@ -487,6 +485,7 @@ export default function Member() {
           </PriceWrapper>
         </Stack>
       </Box>
+      
     </>
   );
 }

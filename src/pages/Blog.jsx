@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Carousel1 from "../Components/Carousel1";
 import Carousel2 from "../Components/Carousel2";
-import Footer1 from "../Components/Footer1";
 import Navbar from "../Components/Navbar";
 
 const Blog = () => {
@@ -43,7 +42,7 @@ const Blog = () => {
           <Carousel2 />
           <hr className="carousel" />
         </div>
-        <Footer1 />
+
       </DIV>
     </>
   );
