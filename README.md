@@ -22,6 +22,14 @@ Link of our deployed project:  https://moonlit-spoon-3401-trilochanprasadbh.verc
 - Chakra UI 
 
 
+## Pages and features
+- Home Page:- Navigation Bar, Footer.
+- Admin Page :- Admin dashboard, CRUD operation on Products.
+- Account Page:- User authentication using json server. 
+- Product Page:- It has sorting ,filtering, url params update functionality.
+- Checkout Page
+
+
 
 
 
